@@ -1,0 +1,627 @@
+/* Variables */
+
+:root {
+  --white: #ffffff;
+  --white-cofee: #f8f7f4;
+  --white-cofee-sub: #fefefe;
+  --white-transparent: rgba(255, 255, 255, 0.8);
+  --white-transparent-popup: rgba(255, 255, 255, 0.2);
+  --orange: #d07058;
+  --orange-bright-cart: #e84d37;
+  --orange-bright-button: #e74a35;
+  /*! что с этими цветам не так. какой в итоге брать если их несколько на один элемент */
+  --orange-push-button: #f26843;
+  --orange-point-button: linear-gradient(180deg, #f26843 0%, #e74a35 100%);
+  --link-point-push: #ffbc9e;
+  --basic-gray: #8996a6;
+  --basic-green: #849d8f;
+  --asphalt: #323232;
+  --subscribtion-text: #5a5a5a;
+  --box-shadow: rgba(172, 16, 0, 0.64);
+  --email-input-border: rgba(178, 178, 178, 0.52);
+}
+
+/* Global */
+
+body {
+  min-width: 1220px;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px; /*! в проекте есть 14, 16, 60; но почти все 16px. как быть */
+  line-height: 22px;
+  color: var(--white);
+  background-color: var(--basic-green);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%; /*не больше чем контейнер*/
+  height: auto; /*для созранения пропорции картинки*/
+}
+
+.visually-hidden {
+  /display: none;
+}
+
+/*Grid*/
+
+.page {
+  height:100%; /*!не понимаю*/
+}
+
+.page-body {
+  min-height: 100%;/*!не понимаю*/
+  display:grid;
+  grid-template-rows: min-content 1fr min-content;
+  /*шапка,боди,футер*/
+  align-content: start;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto; /*выравнивание по центру*/
+  padding: 0 27px;
+}
+
+/* Button */
+.button {
+  font: inherit; /*по умолчанию у браузеров monospace*/
+  text-align: center;
+  background-color: var(--orange-bright-button);
+  vertical-align: middle;
+  color: var(--white);
+  border-radius: 70px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--orange-push-button);
+}
+
+.button.active {
+  background-color: var(--orange-light-button);
+}
+
+/* Header */
+
+
+
+.logo {
+  width: 154px;
+  height: 64px;
+  order: -1; /*ставит лого на 1 место. можно удалить*/
+}
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.main-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  outline: 5px solid rgb(210, 230, 103);/*граница*/
+  outline-offset: 5px;/*граница*/
+  
+}
+
+.main-header .container{
+  display:flex;
+  justify-content: space-between;
+  outline: 5px solid rgb(21, 23, 141);/*граница*/
+  outline-offset: 5px;/*граница*/
+
+}
+
+.site-navigation a {
+  color: var(--white);
+}
+
+.site-navigation a[href]:hover,
+.site-navigation a[href]:focus,
+.user-navigation a[href]:hover,
+.user-navigation a[href]:focus {
+  background-color: var(--white);
+  color: var(--asphalt);
+}
+
+.currentpos {
+  width: 89px;
+  height: 31px;
+}
+
+.site-navigation{
+  outline: 5px solid red;/*граница*/
+  outline-offset: 5px;/*граница*/
+}
+
+.user-navigation {
+  display: flex;
+  align-items: center;
+  outline: 5px solid green;/*граница*/
+  outline-offset: 5px;/*граница*/
+}
+/**************/
+.user-navigation a[href] {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.user-navigation a[href]:hover,
+.user-navigation a[href]:focus {
+  background-color: var(--white);
+  color: var(--asphalt);
+}
+
+.user-navigation .button-hover {
+  background-color: var(--white-transparent-popup);
+}
+
+.user-navigation .button-hover:hover {
+  background-color: var(--white);
+  color: var(--asphalt);
+}
+/**************/
+
+.user-navigation .search {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+}
+
+.search img { /*! как сменить цвет img при hover?*/
+  display: flex;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.user-navigation .login {
+  display: flex;
+  width: 92px;
+  height: 32px;
+  vertical-align: middle; /*! не работает для img*/
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.user-navigation .cart {
+  display: flex;
+  width: 100px;
+  height: 32px;
+  vertical-align: middle; /*! не работает для img*/
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+}
+
+.slider a {
+  text-decoration: none;
+}
+
+.container { /*класс-обертка*/
+  margin: 0 auto; /*выровняется по центру*/
+  padding: 0 27px;
+}
+
+
+
+/* Features */
+
+.features-wrapper {
+  outline: 5px solid rgb(44, 202, 189);/*граница*/
+  outline-offset: 5px;/*граница*/
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+}
+
+.features-raspb h2, /*!в макете они выше, не понял как поднять. через паддинг не получается*/
+.features-choko h2 {
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 41px;
+  padding-left: 16px;
+
+}
+
+.features-raspb p,
+.features-choko p {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  padding-left: 16px;
+}
+
+.features-raspb a,
+.features-choko a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.features-raspb {
+  width: 560px;
+  height: 229px;
+  background-image: url(../img/raspberry_back.jpg);
+  background-size: 100%;
+  border-radius: 16px;
+  box-shadow: 0px 2px 2px var(--box-shadow);
+}
+
+.features-choko {
+  width: 560px;
+  height: 229px;
+  background-image: url(../img/choko_back.jpg);
+  background-size: 100%;
+  border-radius: 16px;
+  box-shadow: 0px 2px 2px var(--box-shadow);
+}
+
+.button.strawb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 164px;
+  height: 48px;
+  margin-left: 374px;
+}
+
+.button.choko {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 191px;
+  height: 48px;
+  margin-left: 347px;
+}
+
+/* Showcase */
+
+.showcase {
+  /*!надпись ХИТ как добавить ?*/
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 26px;/*правый был край больше. картинки не отцентрированы*/
+  outline: 5px solid rgb(255, 255, 255);/*граница*/
+  outline-offset: 5px;/*граница*/
+  margin-bottom: 200px;
+}
+
+.showcase-img {
+  width: 267px;
+  height: 267px;
+}
+
+.showcase li {
+  text-decoration: none;
+  list-style: none;
+  width: 267px;
+  height: 320px;
+}
+
+.showcase h2 {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.showcase p {
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 45px;
+}
+
+.showcase .weight {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+}
+
+.showcase-item {
+  width: 293px;
+  height: 402px;
+  text-align: center;
+}
+
+.showcase-item:hover {
+  background-color: var(--white-transparent-popup);
+  box-shadow: 0px 20px 20px var(--box-shadow);
+  border-radius: 4px;
+}
+
+.showcase-button {
+  width: 200px;
+  height: 44px;
+  text-decoration: none;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 46px;
+}
+
+.showcase-button a {
+  text-decoration: none;
+  vertical-align: middle;
+  color: var(--white)
+}
+
+/* Advantages */
+
+.advantages .features {/*!непонятно как с гридами на 4 части разделить*/
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.advantages-wrapper {
+  color: var(--asphalt);
+  background-image: url(../img/vaffle_pattern2.jpg); /* ".." выходим из папки css на уровень вверх, и заходим в папку img */
+  background-repeat: repeat;
+  width: 1146px;
+  height: 306px;
+  border-radius: 16px;
+}
+
+.advantages h2 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  margin-left: 20px;
+}
+
+.advantages p {
+  font-size: 16px;
+  line-height: 22px;
+  margin-left: 20px;
+}
+
+/* Blog new */
+
+.container.newsubscr {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  outline: 5px solid rgb(30, 255, 0);/*граница*/
+  outline-offset: 5px;/*граница*/
+  margin-top: 50px;/*граница*/
+}
+
+
+.blog-new-wrapper {
+  background-image: url(../img/strawberry_back.jpg);
+  background-image: 100%;
+  width: 560px;
+  height: 220px;
+  border-radius: 16px;
+  outline-offset: 5px;/*граница*/
+  outline: 5px solid rgb(0, 174, 255);/*граница*/
+}
+
+.blog-new {
+  padding-left: 20px;
+  text-align: left;
+  color: var(--asphalt);
+}
+
+.blog-new h3 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.blog-new h2 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  padding-top: 23px;
+}
+
+.blog-new a {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--asphalt)
+}
+
+/* Subscribtion */
+
+.subscr-wrapper {
+  display: flex;
+  background-image: url(../img/post_back.png);
+  width: 560px;
+  height: 220px;
+  outline-offset: 5px;/*граница*/
+  outline: 5px solid rgb(0, 255, 234);/*граница*/
+}
+
+.subscribtion {
+  text-align: left;
+  border-radius: 16px;
+  background-color: var(--white-cofee);
+  color: var(--subscribtion-text);
+  width: 560px;
+  height: 220px;
+  padding-left: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;/*! почему-то неработает. хотя вертикаль ок*/
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.subscribtion .input_email {
+  border: 1px solid var(--email-input-border);
+  border-radius: 6px;
+  width: 368px;
+  height: 44px;
+}
+
+.subscribtion .button {
+  width: 130px;
+  height: 44px;
+  border: none;/*!без этого была граница. стиль по умолчанию?*/
+  box-shadow: 0px 2px 2px var(--box-shadow);
+}
+
+.container.news{
+  display: grid;
+  grid-template-columns: 1fr 1fr;/*!неровно*/
+  outline: 5px solid rgb(255, 255, 255);/*граница*/
+  outline-offset: 5px;/*граница*/
+}
+
+/*Feedback */
+
+.feedback {
+  text-align: left;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--asphalt);
+  width: 303px;
+  height: 306px;
+  background-color: var(--white-cofee-sub);
+  border-radius: 16px;
+  padding-left: 25px;
+  padding-top: 32px;
+}
+
+
+.feedback p {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.feedback a {
+  text-decoration: none;
+  color: var(--white)
+}
+
+.subscr-bold {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 2px;
+}
+
+.feedback .button {
+  box-shadow: 0px 2px 2px var(--box-shadow);
+  width: 253px;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Footer */
+
+.page-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Social */
+.social ul {
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+}
+
+.social a {
+  color: var(--white);
+}
+
+/* Add info */
+.add_info ul {
+  font-size: 13px;
+  line-height: 18px;
+  list-style: none;
+  color: var(--white);
+}
+
+.add_info a {
+  color: var(--white);
+}
+
+.add_info_bold {
+  font-weight: bold;
+}
+
+/* Developer */
+
+.developer {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.developer a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+/* Modals */
+
+/*Login form*/
+
+.login_form input[type="email"],
+.login_form input[type="password"] {
+  font: inherit;
+  color: #999999;
+  background-color: var(--white);
+  ///border: 1px solid rgba(178, 178, 178, 0.52); /* ! */
+  border-radius: 4px;
+  color: #323232; /* ! */
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.login_form input:focus,
+.login_form input:active {
+  border: 2px solid rgba(46, 136, 228, 0.52);
+  font-weight: bold; /*!как сделать жирный текст после введения*/
+}
+
+/* Fieldset */
+
+.filter ul{
+  list-style: none;
+}
+
+.currentpos {
+  background: var(--orange);
+  border-radius: 26px;
+  width: 89px;
+  height: 31px;
+  text-align: center;
+  vertical-align: middle; /*! не работает*/
+  text-decoration: none;
+}
+
+.cart .cart-button {
+  width: 172px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-button a {
+ text-decoration: none;
+ color: var(--white);
+}
+
+.cart-img {
+  width: 33px;
+  height: 33px;
+}
+
+.cart-cross {
+  width: 11px;
+  height: 11px;
+  margin: 0;
+  padding: 0;
+}
