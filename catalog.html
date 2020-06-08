@@ -5,17 +5,16 @@
   <meta charset="utf-8">
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
-
-</head>
+  </head>
 
 <body class="page-body">
   <header class="main-header">
     <div class="container">
       <nav class="site-navigation">
-        <a>
+        <a href="index.html">
           <img src="img/logo_gllacy.png" alt="логотип glacyshop" class="logo">
         </a>
         <a href="catalog.html">Каталог</a>
@@ -31,24 +30,20 @@
       </nav>
 
       <div class="user-navigation">
-        <div class="button-hover search">
-          <a href="#" aria-label="Поиск"><img src="img/icon_search.svg"></a>
-        </div>
-        <div class="button-hover login">
-          <a href="#" aria-label="Личный кабинет"><img src="img/icon_login.svg">Вход</a>
-        </div>
-        <div class="button-hover cart">
-          <a href="#" aria-label="Корзина"><img src="img/icon_basket.svg">Пусто</a>
-        </div>
+        <a class="button-hover search " href="#" aria-label="Поиск"><img src="img/icon_search.svg"></a>
+        <a class="button-hover login " href="#" aria-label="Личный кабинет"><img src="img/icon_login.svg">Вход</a>
+        <a class="button-hover cart " href="#" aria-label="Корзина"><img src="img/icon_basket.svg">Пусто</a>
       </div>
     </div>
 
-    <section>
-      <h2 class="visually-hidden">Время работы</h2>
-      <p>
-        С 10 до 20, ежедневно<br>
-        <span>8 812 450-25-25</span>
-      </p>
+    <section class="container">
+      <div class="work-time">
+        <h2 class="visually-hidden">Время работы</h2>
+        <p>
+          С 10 до 20, ежедневно<br>
+          <span class="work-time-bold">8 812 450-25-25</span>
+        </p>
+      </div>
     </section>
 
   </header>
@@ -292,7 +287,7 @@
 
     <hr>
 
-    <section class="cart visually-hidden">
+    <section class="cart-field VH">
       <h2 class="visually-hidden">Корзина</h2>
       <table>
         <tr>
@@ -304,7 +299,7 @@
             <p>Пломбир с апельсиновым джемом</p>
           </td>
           <td>
-            <p>1,5кг х <span>200 руб.</span></p>
+            <p><span class="mult-price">1,5кг х </span><span class="transp-price">200 руб.</span></p>
           </td>
           <td aria-label="сумма по первому мороженному">
             <p>300 руб.</p>
@@ -319,7 +314,7 @@
             <p>Клубничный пломбир с присыпкой из белого шоколада</p>
           </td>
           <td>
-            <p>1,5кг х <span>300 руб.</span></p>
+            <p><span class="mult-price">1,5кг х </span><span class="transp-price">300 руб.</span></p>
           </td>
           <td aria-label="сумма по первому мороженному">
             <p>450 руб.</p>
@@ -327,10 +322,8 @@
         </tr>
       </table>
       <hr>
-      <p>Итого: 750 руб.</p>
-      <div class="cart-button button">
-        <a href="https://ordersubmit.html">Оформить заказ</a>
-      </div>
+      <p class="total-amount">Итого: 750 руб.</p>
+      <a class="cart-button button" href="https://ordersubmit.html">Оформить заказ</a>
     </section>
 
 

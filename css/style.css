@@ -6,25 +6,53 @@
   --white-cofee-sub: #fefefe;
   --white-transparent: rgba(255, 255, 255, 0.8);
   --white-transparent-popup: rgba(255, 255, 255, 0.2);
-  --orange: #d07058;
   --orange-bright-cart: #e84d37;
-  --orange-bright-button: #e74a35;
-  /*! что с этими цветам не так. какой в итоге брать если их несколько на один элемент */
-  --orange-push-button: #f26843;
-  --orange-point-button: linear-gradient(180deg, #f26843 0%, #e74a35 100%);
+  /**/
+  --orange-normal-button: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  --orange-push-button: linear-gradient(180deg, #F26843 0%, #E74A35 100%), #000000 7%;
+  --orange-point-button: #FFFFFF 20%, linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  /**/
   --link-point-push: #ffbc9e;
   --basic-gray: #8996a6;
   --basic-green: #849d8f;
   --asphalt: #323232;
   --subscribtion-text: #5a5a5a;
   --box-shadow: rgba(172, 16, 0, 0.64);
+  --box-shadow-menu: rgba(0, 0, 0, 0.4);
+  --border-box-menu: #d3d3d2;
   --email-input-border: rgba(178, 178, 178, 0.52);
+  --transp-price: #ABABAB;
+  --multp-price: #000000;
 }
 
 /* Global */
 
+/* Button убрать из глобал*/
+.button {
+  font: inherit; /*по умолчанию у браузеров monospace*/
+  text-align: center;
+  background: var(--orange-normal-button);
+  vertical-align: middle;
+  color: var(--white);
+  border-radius: 70px;
+  font-size: 18px;
+  line-height: 24px;
+  box-shadow: 0px 2px 2px var(--box-shadow);
+}
+
+.button:hover,
+.button:focus {
+  background: var(--orange-point-button);
+  border: none;
+}
+
+.button:active {
+  background: var(--orange-push-button);
+}
+
+
 body {
-  min-width: 1220px;
+  min-width: 1200px;
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
@@ -41,53 +69,32 @@ img {
 }
 
 .visually-hidden {
-  /display: none;
+  display: none;
 }
 
 /*Grid*/
 
 .page {
-  height:100%; /*!не понимаю*/
+  height: 100%; 
 }
 
 .page-body {
-  min-height: 100%;/*!не понимаю*/
-  display:grid;
+  min-height: 100%;
+  display: grid;
   grid-template-rows: min-content 1fr min-content;
   /*шапка,боди,футер*/
   align-content: start;
 }
 
 .container {
+  box-sizing: border-box;
   width: 1200px;
   margin: 0 auto; /*выравнивание по центру*/
   padding: 0 27px;
 }
 
-/* Button */
-.button {
-  font: inherit; /*по умолчанию у браузеров monospace*/
-  text-align: center;
-  background-color: var(--orange-bright-button);
-  vertical-align: middle;
-  color: var(--white);
-  border-radius: 70px;
-  font-size: 18px;
-  line-height: 24px;
-}
-
-.button:hover,
-.button:focus {
-  background-color: var(--orange-push-button);
-}
-
-.button.active {
-  background-color: var(--orange-light-button);
-}
 
 /* Header */
-
-
 
 .logo {
   width: 154px;
@@ -99,29 +106,18 @@ img {
   list-style: none;
 }
 
-.main-header {
+.main-header .container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  outline: 5px solid rgb(210, 230, 103);/*граница*/
-  outline-offset: 5px;/*граница*/
-  
-}
-
-.main-header .container{
-  display:flex;
   justify-content: space-between;
-  outline: 5px solid rgb(21, 23, 141);/*граница*/
-  outline-offset: 5px;/*граница*/
-
+  outline: 5px solid rgb(210, 230, 103); /*граница*/
 }
 
 .site-navigation a {
   color: var(--white);
 }
 
-.site-navigation a[href]:hover,
-.site-navigation a[href]:focus,
+.site-navigation a:not(:first-of-type):hover,
+.site-navigation a:not(:first-child):focus,
 .user-navigation a[href]:hover,
 .user-navigation a[href]:focus {
   background-color: var(--white);
@@ -133,30 +129,19 @@ img {
   height: 31px;
 }
 
-.site-navigation{
-  outline: 5px solid red;/*граница*/
-  outline-offset: 5px;/*граница*/
+.site-navigation {
+  outline: 5px solid red; /*граница*/
 }
 
 .user-navigation {
   display: flex;
   align-items: center;
-  outline: 5px solid green;/*граница*/
-  outline-offset: 5px;/*граница*/
+  outline: 5px solid green; /*граница*/
 }
-/**************/
+
 .user-navigation a[href] {
   text-decoration: none;
   color: var(--white);
-}
-
-.user-navigation a[href]:hover,
-.user-navigation a[href]:focus {
-  background-color: var(--white);
-  color: var(--asphalt);
-}
-
-.user-navigation .button-hover {
   background-color: var(--white-transparent-popup);
 }
 
@@ -164,7 +149,6 @@ img {
   background-color: var(--white);
   color: var(--asphalt);
 }
-/**************/
 
 .user-navigation .search {
   display: flex;
@@ -175,10 +159,10 @@ img {
   border-radius: 16px;
 }
 
-.search img { /*! как сменить цвет img при hover?*/
+.search img {
   display: flex;
   vertical-align: middle;
-  width: 100%;
+  width: 50%;
 }
 
 .user-navigation .login {
@@ -201,34 +185,64 @@ img {
   border-radius: 16px;
 }
 
+.work-time-bold {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 24px;
+}
+
+.work-time {
+  margin-left: auto;
+}
+
+/* Slider */
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  outline: 5px solid rgb(172, 72, 142); /*граница*/
+}
+
+.slider ul {
+  list-style: none;
+}
+
+.slider p {
+  padding-bottom: 50px;
+}
+
 .slider a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
+  width: 278px;
+  height: 63px;
+  box-shadow: 0px 2px 2px var(--box-shadow);
+  border-radius: 70px;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 44px;
 }
-
-.container { /*класс-обертка*/
-  margin: 0 auto; /*выровняется по центру*/
-  padding: 0 27px;
-}
-
-
 
 /* Features */
 
 .features-wrapper {
-  outline: 5px solid rgb(44, 202, 189);/*граница*/
-  outline-offset: 5px;/*граница*/
+  outline: 5px solid rgb(44, 202, 189); /*граница*/
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   width: 1200px;
 }
 
-.features-raspb h2, /*!в макете они выше, не понял как поднять. через паддинг не получается*/
+.features-raspb h2,
 .features-choko h2 {
   font-weight: bold;
   font-size: 35px;
   line-height: 41px;
   padding-left: 16px;
-
 }
 
 .features-raspb p,
@@ -284,13 +298,11 @@ img {
 /* Showcase */
 
 .showcase {
-  /*!надпись ХИТ как добавить ?*/
+  /*надпись ХИТ добавить*/
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  column-gap: 26px;/*правый был край больше. картинки не отцентрированы*/
-  outline: 5px solid rgb(255, 255, 255);/*граница*/
-  outline-offset: 5px;/*граница*/
-  margin-bottom: 200px;
+  column-gap: 26px; /*правый был край больше. картинки не отцентрированы*/
+  outline: 5px solid rgb(255, 255, 255); /*граница*/
 }
 
 .showcase-img {
@@ -299,10 +311,11 @@ img {
 }
 
 .showcase li {
+  display: flex;
+  justify-content: center;
   text-decoration: none;
   list-style: none;
   width: 267px;
-  height: 320px;
 }
 
 .showcase h2 {
@@ -314,6 +327,7 @@ img {
   font-weight: bold;
   font-size: 45px;
   line-height: 45px;
+  margin: 0;
 }
 
 .showcase .weight {
@@ -323,9 +337,15 @@ img {
 }
 
 .showcase-item {
+  display: flex;
+  flex-direction: column;
   width: 293px;
-  height: 402px;
   text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-top: 6px;
 }
 
 .showcase-item:hover {
@@ -342,20 +362,19 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 46px;
 }
 
 .showcase-button a {
   text-decoration: none;
   vertical-align: middle;
-  color: var(--white)
+  color: var(--white);
 }
 
 /* Advantages */
 
-.advantages .features {/*!непонятно как с гридами на 4 части разделить*/
+.advantages .features {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .advantages-wrapper {
@@ -371,6 +390,8 @@ img {
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;
+  margin: 0;
+  margin-top: 24px;
   margin-left: 20px;
 }
 
@@ -385,12 +406,11 @@ img {
 .container.newsubscr {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 26px;
   align-items: center;
-  outline: 5px solid rgb(30, 255, 0);/*граница*/
-  outline-offset: 5px;/*граница*/
-  margin-top: 50px;/*граница*/
+  outline: 5px solid rgb(30, 255, 0); /*граница*/
+  margin-top: 50px; /*граница*/
 }
-
 
 .blog-new-wrapper {
   background-image: url(../img/strawberry_back.jpg);
@@ -398,8 +418,7 @@ img {
   width: 560px;
   height: 220px;
   border-radius: 16px;
-  outline-offset: 5px;/*граница*/
-  outline: 5px solid rgb(0, 174, 255);/*граница*/
+  outline: 5px solid rgb(0, 174, 255); /*граница*/
 }
 
 .blog-new {
@@ -425,7 +444,7 @@ img {
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
-  color: var(--asphalt)
+  color: var(--asphalt);
 }
 
 /* Subscribtion */
@@ -435,8 +454,7 @@ img {
   background-image: url(../img/post_back.png);
   width: 560px;
   height: 220px;
-  outline-offset: 5px;/*граница*/
-  outline: 5px solid rgb(0, 255, 234);/*граница*/
+  outline: 5px solid rgb(0, 255, 234); /*граница*/
 }
 
 .subscribtion {
@@ -444,13 +462,13 @@ img {
   border-radius: 16px;
   background-color: var(--white-cofee);
   color: var(--subscribtion-text);
-  width: 560px;
-  height: 220px;
+  width: 548px;
+  height: 210px;
   padding-left: 20px;
   margin-top: 5px;
-  margin-bottom: 5px;/*! почему-то неработает. хотя вертикаль ок*/
   margin-left: 6px;
   margin-right: 6px;
+  
 }
 
 .subscribtion .input_email {
@@ -463,15 +481,14 @@ img {
 .subscribtion .button {
   width: 130px;
   height: 44px;
-  border: none;/*!без этого была граница. стиль по умолчанию?*/
+  border: none;
   box-shadow: 0px 2px 2px var(--box-shadow);
 }
 
-.container.news{
+.container.news {
   display: grid;
-  grid-template-columns: 1fr 1fr;/*!неровно*/
-  outline: 5px solid rgb(255, 255, 255);/*граница*/
-  outline-offset: 5px;/*граница*/
+  grid-template-columns: 1fr 1fr;
+  outline: 5px solid var(--white-transparent); /*граница*/
 }
 
 /*Feedback */
@@ -487,8 +504,8 @@ img {
   border-radius: 16px;
   padding-left: 25px;
   padding-top: 32px;
+  margin-top: 15px;/*временно*/
 }
-
 
 .feedback p {
   font-size: 14px;
@@ -497,7 +514,7 @@ img {
 
 .feedback a {
   text-decoration: none;
-  color: var(--white)
+  color: var(--white);
 }
 
 .subscr-bold {
@@ -514,7 +531,9 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 31px;
 }
+
 
 /*Footer */
 
@@ -532,11 +551,14 @@ img {
 }
 
 .social a {
+  margin-left: 12px;
   color: var(--white);
 }
 
 /* Add info */
 .add_info ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   font-size: 13px;
   line-height: 18px;
   list-style: none;
@@ -554,6 +576,8 @@ img {
 /* Developer */
 
 .developer {
+  display: flex;
+  flex-direction: column;
   font-size: 12px;
   line-height: 18px;
 }
@@ -563,45 +587,188 @@ img {
   text-decoration: none;
 }
 
+.developer img {
+  align-self: flex-start; /*по дефолту флекс растягивает картинку*/
+}
+
 /* Modals */
+
+/*Search*/
+
+.search-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 341px;
+  height: 84px;
+  background: var(--white-cofee);
+  box-shadow: 0px 20px 20px var(--box-shadow-menu);
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.search-field input[type="search"] {
+  width: 311px;
+  height: 44px;
+  background: var(--white);
+  border: 1px solid var(--border-box-menu);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
 
 /*Login form*/
 
-.login_form input[type="email"],
-.login_form input[type="password"] {
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 277px;
+  height: 214px;
+  background-color: var(--white);
+  padding: 0 27px;
+  background: var(--white-cofee);
+  box-shadow: 0px 20px 20px var(--box-shadow-menu);
+  border-radius: 4px;
+}
+
+.login-form .authoriz_pswrd {
+  margin-top: 25px;
+}
+
+.login-form .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 103px;
+  height: 44px;
+  border: none;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
   font: inherit;
   color: #999999;
   background-color: var(--white);
-  ///border: 1px solid rgba(178, 178, 178, 0.52); /* ! */
+  border: 1px solid var(--email-input-border);
   border-radius: 4px;
-  color: #323232; /* ! */
+  color: var(--asphalt); 
   font-size: 16px;
   line-height: 20px;
+  width: 241px;
+  height: 44px;
+  border: 1px solid var(--border-box-menu);
 }
 
-.login_form input:focus,
-.login_form input:active {
+.login-form input:focus,
+.login-form input:active {
   border: 2px solid rgba(46, 136, 228, 0.52);
-  font-weight: bold; /*!как сделать жирный текст после введения*/
+  font-weight: bold; /*!как сделать жирный текст после ввода текста и перемещения фокуса?*/
+}
+
+.login-form a {
+  font-size: 13px;
+  line-height: 15px;
+  color: var(--asphalt);
+}
+
+.login-form .registration {
+  display: flex;
+  justify-content: space-between;
+  width: 241px;
+}
+
+/*Feedback form*/
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  margin-top: 15px; /*удалить после*/
+  width: 477px;
+  height: 441px;
+  background: var(--white-cofee);
+  border-radius: 6px;
+}
+
+.feedback-form h2 {
+  width: 349px;
+  height: 17px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: var(--asphalt);
+}
+
+.feedback-form [method="post"] {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.feedback-form input[type="text"] {
+  width: 267px;
+  height: 44px;
+  background: var(--white);
+  border: 1px solid var(--email-input-border);
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.feedback-form textarea {
+width: 428px;
+height: 154px;
+background: var(--white);
+border: 1px solid var(--email-input-border);
+box-sizing: border-box;
+border-radius: 4px;
+margin-bottom: 25px;
+}
+
+.feedback-form button[type="submit"] {
+  border: none;
+  width: 140px;
+  height: 44px;
+  align-self: flex-end;
 }
 
 /* Fieldset */
 
-.filter ul{
+.filter ul {
   list-style: none;
 }
 
-.currentpos {
-  background: var(--orange);
-  border-radius: 26px;
-  width: 89px;
-  height: 31px;
-  text-align: center;
-  vertical-align: middle; /*! не работает*/
-  text-decoration: none;
+.cart-field {
+  width: 539px;
+  height: 242px;
+  font-size: 13px;
+  line-height: 16px;
+  background-color: var(--white-cofee);
+  box-shadow: 0px 20px 20px var(--box-shadow-menu);
+  border-radius: 4px;
 }
 
-.cart .cart-button {
+.cart-field p {
+  color: var(--asphalt);
+}
+
+.cart-field .total-amount {
+  font-weight: bold;
+  font-size: 15px;
+  text-align: end;
+  margin-right: 14px;
+}
+
+.transp-price {
+  color: var(--transp-price);
+}
+
+.mult-price {
+ color: var(--multp-price)
+}
+
+.cart-field .cart-button {
   width: 172px;
   height: 44px;
   display: flex;
@@ -609,9 +776,12 @@ img {
   justify-content: center;
 }
 
-.cart-button a {
- text-decoration: none;
- color: var(--white);
+.cart-button {
+  text-decoration: none;
+  color: var(--white);
+  margin-left: auto;
+  margin-right: 14px;
+  
 }
 
 .cart-img {

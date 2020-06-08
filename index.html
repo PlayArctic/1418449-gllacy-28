@@ -4,10 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
-
 </head>
 
 <body class="page-body">
@@ -17,56 +16,50 @@
         <a>
           <img src="img/logo_gllacy.png" alt="логотип glacyshop" class="logo">
         </a>
-        <a href="catalog.html">Каталог</a>
+        <a class="site-menu" href="catalog.html">Каталог</a>
         <ul class="visually-hidden">
           <li><a href="new_offer.html">Новинки</a></li>
-          <li><a href="slivochnoe.html">Сливочное</a></li>
+          <li><a href="catalog.html">Сливочное</a></li>
           <li><a href="sherbet.html">Щербеты</a></li>
           <li><a href="frukt_led.html">Фруктовый лед</a></li>
           <li><a href="melorin.html">Мелорин</a></li>
         </ul>
-        <a href="delivery_pay.html">Доставка и оплата</a>
-        <a href="about_us.html">О компании</a>
+        <a class="site-menu" href="delivery_pay.html">Доставка и оплата</a>
+        <a class="site-menu" href="about_us.html">О компании</a>
       </nav>
 
       <div class="user-navigation">
-        <div class="button-hover search">
-          <a href="#" aria-label="Поиск"><img src="img/icon_search.svg"></a>
-        </div>
-        <div class="button-hover login">
-          <a href="#" aria-label="Личный кабинет"><img src="img/icon_login.svg">Вход</a>
-        </div>
-        <div class="button-hover cart">
-          <a href="#" aria-label="Корзина"><img src="img/icon_basket.svg">Пусто</a>
-        </div>
+        <a class="button-hover search " href="#" aria-label="Поиск"><img src="img/icon_search.svg"></a>
+        <a class="button-hover login " href="#" aria-label="Личный кабинет"><img src="img/icon_login.svg">Вход</a>
+        <a class="button-hover cart " href="#" aria-label="Корзина"><img src="img/icon_basket.svg">Пусто</a>
       </div>
     </div>
 
-    <section>
-      <h2 class="visually-hidden">Время работы</h2>
-      <p>
-        С 10 до 20, ежедневно<br>
-        <span>8 812 450-25-25</span>
-      </p>
+    <section class="container">
+      <div class="work-time">
+        <h2 class="visually-hidden">Время работы</h2>
+        <p>
+          С 10 до 20, ежедневно<br>
+          <span class="work-time-bold">8 812 450-25-25</span>
+        </p>
+      </div>
     </section>
+  </header>
 
-    <div class="slider visually-hidden">
-      <!-- наверное лучше оставить слайдер так, до момента пока не дойдем до этой темы. если не против-->
+
+  <main>
+    <div class="slider container">
       <ul>
-        <li><img src="img/img1.jpg" alt="Крем-брюле и пломбир с малиновым джемом"></li>
-        <li><img src="img/img2.jpg" alt="Шоколадный пломбир и лимонный сорбет"></li>
-        <li><img src="img/img3.jpg" alt="Пломбир с помадкой и клубничный щербет"></li>
+        <li><img src="img/group_ice_creams.png" alt="Крем-брюле и пломбир с малиновым джемом"></li>
+        <li class="visually-hidden"><img src="#" alt="Шоколадный пломбир и лимонный сорбет"></li>
+        <li class="visually-hidden"><img src="#" alt="Пломбир с помадкой и клубничный щербет"></li>
       </ul>
       <p>Крем-брюле и пломбир с малиновым джемом</p>
-      <p>Шоколадный пломбир и лимонный сорбет</p>
-      <p>Пломбир с помадкой и клубничный щербет</p>
+      <p class="visually-hidden">Шоколадный пломбир и лимонный сорбет</p>
+      <p class="visually-hidden">Пломбир с помадкой и клубничный щербет</p>
       <a href="sale_prop1.html" class="button">Давайте оба!</a>
       <div class="slider_dot"></div>
     </div>
-
-  </header>
-
-  <main>
 
     <h1 class="visually-hidden">GlacyShop магазин по продаже мороженого собственного проиводства</h1>
 
@@ -75,18 +68,14 @@
       <section class="features-raspb">
         <h2>Малинка даром!</h2>
         <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку маринового варенья бесплатно.</p>
-        <div class="button strawb">
-          <a href="#">Хочу варенье!</a>
-        </div>
+        <a class="button strawb" href="#">Хочу варенье!</a>
       </section>
 
       <section class="features-choko">
         <h2>Шоколадки даром!</h2>
         <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
         </p>
-        <div class="button choko">
-          <a href="#">Хочу шоколадки!</a>
-        </div>
+        <a class="button choko" href="#">Хочу шоколадки!</a>
       </section>
     </div>
 
@@ -94,13 +83,12 @@
       <li>
         <article class="showcase-item">
           <a href="#">
-            <img class="showcase-img" src="img/ice_with_orange.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+            <img class="showcase-img" src="img/ice_with_orange.png"
+              alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
           </a>
           <p>310 ₽<span class="weight">/кг</span></p>
           <h2>Сливочное с апельсиновым джемом и цитрусовой стружкой</h2>
-          <div class="showcase-button button visually-hidden">
-            <a href="#">Быстрый просмотр</a>
-          </div>
+          <a class="showcase-button button visually-hidden" href="#">Быстрый просмотр</a>
         </article>
       </li>
 
@@ -111,22 +99,19 @@
           </a>
           <p>380 ₽<span class="weight">/кг</span></p>
           <h2>Сливочно-кофейное с кусочками шоколада</h2>
-          <div class="showcase-button button visually-hidden">
-            <a href="#">Быстрый просмотр</a>
-          </div>
+          <a class="showcase-button button visually-hidden" href="#">Быстрый просмотр</a>
         </article>
       </li>
 
       <li>
         <article class="showcase-item">
           <a href="#">
-            <img class="showcase-img" src="img/ice_strawberry.png" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+            <img class="showcase-img" src="img/ice_strawberry.png"
+              alt="Сливочно-клубничное с присыпкой из белого шоколада">
           </a>
           <p>355 ₽<span class="weight">/кг</span></p>
           <h2>Сливочно-клубничное с присыпкой из белого шоколада</h2>
-          <div class="showcase-button button visually-hidden">
-            <a href="#">Быстрый просмотр</a>
-          </div>
+          <a class="showcase-button button visually-hidden" href="#">Быстрый просмотр</a>
         </article>
       </li>
 
@@ -137,9 +122,7 @@
           </a>
           <p>415 ₽<span>/кг</span></p>
           <h2>Сливочное крем-брюле с карамельной подливкой</h2>
-          <div class="showcase-button button visually-hidden">
-            <a href="#">Быстрый просмотр</a>
-          </div>
+          <a class="showcase-button button visually-hidden" href="#">Быстрый просмотр</a>
         </article>
       </li>
 
@@ -152,13 +135,13 @@
           <p><img src="img/ice_sundae.png"> Все наше мороженое изготавливается на собственном производстве, с
             использованием современного оборудования и
             проверенных временем технологий.</p>
-          <p><img src="img/eco.png"> Для приготовления мороженого используются настоящие сливки и молоко высочайшего
-            качества. Все дополнительные
-            ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
           <p><img src="img/cow.png"> Закупка ингредиентов производится только у проверенных фермерских хозяйств и
             компаний, с которыми нас
             связывает
             долговременное сотрудничество.</p>
+          <p><img src="img/eco.png"> Для приготовления мороженого используются настоящие сливки и молоко высочайшего
+            качества. Все дополнительные
+            ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
           <p><img src="img/thermometr.png"> Доставка нашего мороженного до заказчиков осуществляется в специальном
             термопаке, который не дает мороженому
             растаять в пути и позволяет сохранить превосходный вкус.</p>
@@ -194,7 +177,7 @@
 
     <section class="container">
       <div class="feedback">
-        <!--<h2 class="visually-hidden">Адрес и форма обратной связи</h2> -->
+        <h2 class="visually-hidden">Адрес и форма обратной связи</h2>
         <p>
           Адрес главного офиса<br>
           и офлайн-магазина:<br>
@@ -214,37 +197,43 @@
 
     <hr>
 
-    <section class="visually-hidden">
+    <section class="VH container search-field">
       <h2 class="visually-hidden">Форма поиска</h2>
       <form action="https://echo.htmlacademy.ru/courses" method="get">
-        <input type="search" placeholder="Что ищем?" name="search_field" id="search_field">
+        <input type="search" placeholder="Крем-брюле" name="search_field" id="search_field">
         <label for="search_field" class="visually-hidden">Поле поиска</label>
       </form>
     </section>
 
-    <section class="visually-hidden login_form">
+    <section class="VH login-form container">
       <h2 class="visually-hidden">Форма авторизации</h2>
       <form action="https://echo.htmlacademy.ru/courses" method="post">
-        <input type="email" placeholder="Электорнная почта" name="authoriz_email" id="authoriz_email">
+        <input type="email" placeholder="email@example.com" name="authoriz_email" id="authoriz_email"
+        class="authoriz_email">
         <label for="authoriz_email" class="visually-hidden">Авторизация. Введите email</label>
-        <input type="password" placeholder="Пароль" name="authoriz_pswrd" id="authoriz_pswrd">
+        <input type="password" placeholder="******" name="authoriz_pswrd" id="authoriz_pswrd" 
+        class="authoriz_pswrd">
         <label for="authoriz_pswrd" class="visually-hidden">Авторизация. Введите пароль</label>
-        <button type="submit" aria-label="авторизоваться">Войти</button>
       </form>
-      <a href="#" aria-label="Забыли пароль?">Забыли пароль?</a>
-      <a href="#" aria-label="Зарегистрироваться">Новая регистрация</a>
+      <div class="registration">
+        <button class="button" type="submit" aria-label="авторизоваться">Войти</button>
+        <div class="reguttons">
+          <a href="#" aria-label="Забыли пароль?">Забыли пароль?</a><br>
+          <a href="#" aria-label="Зарегистрироваться">Новая регистрация</a>
+        </div>
+      </div>
     </section>
 
-    <section class="visually-hidden feedback_form">
+    <section class="VH feedback-form container">
       <h2>Мы обязательно вам ответим!</h2>
       <form action="https://echo.htmlacademy.ru/courses" method="post">
-        <input type="text" placeholder="Как вас зовут?" name="customer_name" id="customer_name">
+        <input type="text" placeholder="Как вас зовут?" name="customer-name" id="customer_name">
         <label for="customer_name" class="visually-hidden">Как вас зовут?</label>
-        <input type="text" placeholder="Ваша почта для ответа?" name="customer_email" id="customer_email">
+        <input type="text" placeholder="Ваша почта для ответа?" name="customer-email" id="customer_email">
         <label for="customer_email" class="visually-hidden">Ваша почта для ответа?</label>
         <textarea placeholder="Напишите что-нибудь..." name="customer_question" id="customer_question"></textarea>
         <label for="customer_question" class="visually-hidden">Напишите что-нибудь</label>
-        <button type="submit" aria-label="Отправить вопрос">Отправить</button>
+        <button type="submit" aria-label="Отправить вопрос" class="button">Отправить</button>
       </form>
     </section>
 
