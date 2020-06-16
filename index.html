@@ -10,6 +10,8 @@
 </head>
 
 <body class="page-body">
+  <div class="modal-wrapper visually-hidden"></div>
+  <div class="modal-dark-wrapper visually-hidden"></div>
   <div class="site-wrapper-1">
     <header class="main-header">
       <div class="navigation-wrapper container">
@@ -17,7 +19,7 @@
           <a>
             <img src="img/logo_gllacy.svg" alt="логотип glacyshop" class="logo">
           </a>
-          <a class="site-menu" href="catalog.html">Каталог</a>
+          <a class="site-menu-inactive catalog" href="catalog.html">Каталог</a>
           <ul class="visually-hidden catalog-submenu">
             <li>
               <a href="new_offer.html">Новинки</a>
@@ -28,8 +30,8 @@
             <li><a href="frukt_led.html">Фруктовый лед</a></li>
             <li><a href="melorin.html">Мелорин</a></li>
           </ul>
-          <a class="site-menu" href="delivery_pay.html">Доставка и оплата</a>
-          <a class="site-menu" href="about_us.html">О компании</a>
+          <a class="site-menu-inactive" href="delivery_pay.html">Доставка и оплата</a>
+          <a class="site-menu-inactive" href="about_us.html">О компании</a>
         </nav>
 
         <div class="user-navigation">
@@ -91,7 +93,7 @@
             </svg>
             <span class="menu-text-cart">Пусто</span>
           </a>
-          <section class="cart-field visually-hidden">
+          <!--<section class="cart-field visually-hidden">
             <h2 class="visually-hidden">Корзина</h2>
             <table>
               <tr>
@@ -130,7 +132,7 @@
             <hr>
             <p class="total-amount">Итого: 750 руб.</p>
             <a class="cart-button button" href="https://ordersubmit.html">Оформить заказ</a>
-          </section>
+          </section> -->
 
         </div>
       </div>
@@ -286,27 +288,27 @@
         </div>
       </div>
 
-      <section class="container feedback-container">
-        <div class="feedback">
-          <h2 class="visually-hidden">Адрес и форма обратной связи</h2>
-          <p>
-            Адрес главного офиса<br>
-            и офлайн-магазина:<br>
-            <span class="subscr-bold">ул. Большая Конюшенная,<br>
-              19/8, Санкт-петербург</span>
-          </p>
-          <p>
-            Для заказов по телефону:<br>
-            <span class="subscr-bold">8 812 450-25-25</span><br>
-            (с 10 до 20 ежедневно)
-          </p>
-          <div class="button">
-            <a href="feedback.html">Форма обратной связи</a>
+      <section class="feedback-container">
+        <div class="map-wrapper">
+          <div class="feedback">
+            <h2 class="visually-hidden">Адрес и форма обратной связи</h2>
+            <p>
+              Адрес главного офиса<br>
+              и офлайн-магазина:<br>
+              <span class="subscr-bold">ул. Большая Конюшенная,<br>
+                19/8, Санкт-петербург</span>
+            </p>
+            <p>
+              Для заказов по телефону:<br>
+              <span class="subscr-bold">8 812 450-25-25</span><br>
+              (с 10 до 20 ежедневно)
+            </p>
+            <a class="button feedback-btn" href="feedback.html">Форма обратной связи</a>
           </div>
         </div>
       </section>
 
-      <hr>
+
 
       <section class="visually-hidden feedback-form">
         <h2>Мы обязательно вам ответим!</h2>
@@ -341,7 +343,7 @@
             <li>
               <a href="https://www.instagram.com/" aria-label="instagram">
                 <svg class="svg-social" width="32" height="32" viewBox="0 0 32 32" fill="none"
-                  xmlns="http://www.w3.org/2000/svg"> 
+                  xmlns="http://www.w3.org/2000/svg">
                   <g opacity="0.8">
                     <path
                       d="M20.92 16C20.92 17.3155 20.3974 18.5771 19.4673 19.5072C18.5371 20.4374 17.2755 20.96 15.96 20.96C14.6445 20.96 13.3829 20.4374 12.4528 19.5072C11.5226 18.5771 11 17.3155 11 16C11.001 15.6158 11.048 15.233 11.14 14.86H10.24V21.7H21.64V14.86H20.74C20.8406 15.2325 20.901 15.6147 20.92 16Z"
@@ -417,6 +419,7 @@
 
 
     </footer>
+    <script src="js/script.js"></script>
   </div>
 
 </body>

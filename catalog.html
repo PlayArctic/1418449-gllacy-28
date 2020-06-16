@@ -3,7 +3,6 @@
 
 <head>
   <meta charset="utf-8">
-  <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
@@ -11,15 +10,15 @@
 </head>
 
 <body class="page-body">
+  <div class="modal-wrapper visually-hidden"></div>
   <div class="site-wrapper-main">
     <header class="main-header">
       <div class="navigation-wrapper container">
-        <!--почему родительский контейнер hearer'а здесь не работает?-->
         <nav class="site-navigation">
           <a href="index.html">
             <img src="img/logo_gllacy.svg" alt="логотип glacyshop" class="logo">
           </a>
-          <a class="site-menu" href="catalog.html">Каталог</a>
+          <a class="site-menu-active" href="catalog.html">Каталог</a>
           <ul class="visually-hidden catalog-submenu">
             <li>
               <a href="new_offer.html">Новинки</a>
@@ -30,13 +29,13 @@
             <li><a href="frukt_led.html">Фруктовый лед</a></li>
             <li><a href="melorin.html">Мелорин</a></li>
           </ul>
-          <a class="site-menu" href="delivery_pay.html">Доставка и оплата</a>
-          <a class="site-menu" href="about_us.html">О компании</a>
+          <a class="site-menu-inactive" href="delivery_pay.html">Доставка и оплата</a>
+          <a class="site-menu-inactive" href="about_us.html">О компании</a>
         </nav>
 
         <div class="user-navigation">
           <a class="button-hover search" href="#" aria-label="Поиск">
-            <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="svg-menu" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M16 14.665l-4.921-4.932a6.144 6.144 0 00-.994-8.273 6.113 6.113 0 00-8.307.352 6.141 6.141 0 00-.293 8.328 6.11 6.11 0 008.262.937L14.659 16 16 14.665zm-9.918-4.288a4.245 4.245 0 01-3.928-2.63 4.269 4.269 0 01.922-4.643 4.248 4.248 0 014.632-.923 4.253 4.253 0 012.624 3.936 4.274 4.274 0 01-1.247 3.01 4.256 4.256 0 01-3.003 1.25z"
                 fill="#fff" /></svg>
@@ -50,7 +49,8 @@
           </section>
 
           <a class="button-hover login" href="#" aria-label="Личный кабинет">
-            <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="svg-menu" width="20" height="19" viewBox="0 0 20 19" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
               <path d="M6.04 14.88L12.96 9.5L6.04 4.13V7.04H0V11.96H6.04V14.88Z" fill="white" />
               <path
                 d="M18 0H5C4.46957 0 3.96086 0.210714 3.58579 0.585786C3.21071 0.960859 3 1.46957 3 2V4H5V2H18V17H5V15H3V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19H18C18.5304 19 19.0391 18.7893 19.4142 18.4142C19.7893 18.0391 20 17.5304 20 17V2C20 1.46957 19.7893 0.960859 19.4142 0.585786C19.0391 0.210714 18.5304 0 18 0Z"
@@ -78,7 +78,8 @@
           </section>
 
           <a class="button-hover cart" href="#" aria-label="Корзина">
-            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="svg-menu" width="21" height="20" viewBox="0 0 21 20" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M5.70345 2L5.46161 0H0V2H3.66795L5.17946 15H19.2869L21 2H5.70345ZM17.5034 13H6.97313L5.96545 4H18.6924L17.5034 13Z"
                 fill="white" />
@@ -162,66 +163,100 @@
 
       <h1 class="container">Сливочное мороженое</h1>
 
+
       <form class="form-filter container" action="https://echo.htmlacademy.ru/courses" method="get">
-        <label for="sort-by">Сортировка</label>
-        <select name="sort-by" id="sort-by">
-          <option>по популярности</option>
-          <option>по цене</option>
-          <option>по отзывам</option>
-        </select>
 
-        <label for="price-by">Цена: 100 ₽ - 500 ₽</label>
-        <input type="range" min="250" max="500" step="50" name="price-by" id="price-by">
+        <div class="filter filter-sort-by-wrp">
+          <label for="sort-by">Сортировка</label>
+          <select name="sort-by" id="sort-by">
+            <option>по популярности</option>
+            <option>по цене</option>
+            <option>по отзывам</option>
+          </select>
+        </div>
 
-        <fieldset class="filter-fat">
+        <fieldset class="filter filter-item">
+          <legend>Цена:</legend>
+          <div class="range-filter">
+            
+            <div class="price-controls">
+              <label class="min-price">
+                <input type="number" name="min-price" value="100" step="50" min="0" max="450">
+                ₽ – </label>
+              <label class="max-price">
+                <input type="number" name="max-price" value="500" step="50" min="50" max="500">
+                ₽</label>
+            </div>
+
+            <div class="range-controls">
+              <div class="scale">
+                <!--Шкала-->
+                <div class="bar" style="
+                margin-left:11%;
+                width:59%;
+                "></div>
+                <!--Шкала. Зеленая полоска-->
+              </div>
+              <div class="toggle toggle-min" tabindex="0"></div>
+              <div class="toggle toggle-max" tabindex="0"></div>
+            </div>
+            
+          </div>
+        </fieldset>
+
+        <fieldset class="filter filter-fat-content-wrp">
           <label>Жирность</label>
-          <ul>
+          <ul class="fat-list">
             <li>
-              <input type="radio" name="fat-content" value="0%" id="filter-fat-0%">
-              <label for="filter-fat-0%">0% жирности</label>
+              <input class="visually-hidden fat-item" type="radio" name="fat-content" value="0%" id="filter-fat-0">
+              <label for="filter-fat-0">0%</label>
             </li>
             <li>
-              <input type="radio" name="fat-content" value="<10%" id="filter-fat-under-10%" checked>
-              <label for="filter-fat-under-10%">до 10% жирности</label>
+              <input class="visually-hidden fat-item" type="radio" name="fat-content" value="<10%" id="filter-fat-under-10%" checked>
+              <label for="filter-fat-under-10%">до 10%</label>
             </li>
             <li>
-              <input type="radio" name="fat-content" value="<30%" id="filter-fat-under-30%">
-              <label for="filter-fat-under-30%">до 30% жирности</label>
+              <input class="visually-hidden fat-item" type="radio" name="fat-content" value="<30%" id="filter-fat-under-30%">
+              <label for="filter-fat-under-30%">до 30%</label>
             </li>
             <li>
-              <input type="radio" name="fat-content" value=">30%" id="filter-fat-above-30%">
-              <label for="filter-fat-above-30%">выше 30% жирности</label>
+              <input class="visually-hidden fat-item" type="radio" name="fat-content" value=">30%" id="filter-fat-above-30%">
+              <label for="filter-fat-above-30%">выше 30%</label>
             </li>
           </ul>
         </fieldset>
 
-        <fieldset class="filter">
+        <fieldset class="filter filter-fillers-wrp">
           <label>Наполнители</label>
-          <ul>
+          <ul class="filler-list">
             <li>
-              <input type="checkbox" name="chocolate" id="filter-chocolate" checked>
+              <input class="visually-hidden filler-item" type="checkbox" name="chocolate" id="filter-chocolate" checked>
               <label for="filter-chocolate">Шоколадные</label>
             </li>
             <li>
-              <input type="checkbox" name="sugar-powder" id="filter-sugar-powder" checked>
+              <input class="visually-hidden filler-item" type="checkbox" name="sugar-powder" id="filter-sugar-powder" checked>
               <label for="filter-sugar-powder">Сахарные присыпки</label>
             </li>
             <li>
-              <input type="checkbox" name="fruits" id="filter-fruits">
+              <input class="visually-hidden filler-item" type="checkbox" name="fruits" id="filter-fruits">
               <label for="filter-fruits">Фрукты</label>
             </li>
             <li>
-              <input type="checkbox" name="syrup" id="filter-syrup">
+              <input class="visually-hidden filler-item" type="checkbox" name="syrup" id="filter-syrup">
               <label for="filter-syrup">Сиропы</label>
             </li>
             <li>
-              <input type="checkbox" name="jam" id="filter-jam">
+              <input class="visually-hidden filler-item" type="checkbox" name="jam" id="filter-jam">
               <label for="filter-jam">Джемы</label>
             </li>
           </ul>
         </fieldset>
+
         <button type="submit">Применить</button>
+
       </form>
+
+
 
       <ul class="showcase container">
         <li>
@@ -381,12 +416,25 @@
             </div>
           </article>
         </li>
-
       </ul>
 
-
-      <hr>
-
+      <ul class="paginator container">
+        <li>
+          <a class="page-item page-active" href="#">1</a>
+        </li>
+        <li>
+          <a class="page-item page-inactive" href="#">2</a>
+        </li>
+        <li>
+          <a class="page-item page-inactive" href="#">3</a>
+        </li>
+        <li>
+          <a class="page-item page-inactive" href="#">4</a>
+        </li>
+        <li>
+          <a class="page-item page-inactive" href="#">5</a>
+        </li>
+      </ul>
 
     </main>
 
@@ -408,7 +456,7 @@
             <li>
               <a href="https://www.instagram.com/" aria-label="instagram">
                 <svg class="svg-social" width="32" height="32" viewBox="0 0 32 32" fill="none"
-                  xmlns="http://www.w3.org/2000/svg"> 
+                  xmlns="http://www.w3.org/2000/svg">
                   <g opacity="0.8">
                     <path
                       d="M20.92 16C20.92 17.3155 20.3974 18.5771 19.4673 19.5072C18.5371 20.4374 17.2755 20.96 15.96 20.96C14.6445 20.96 13.3829 20.4374 12.4528 19.5072C11.5226 18.5771 11 17.3155 11 16C11.001 15.6158 11.048 15.233 11.14 14.86H10.24V21.7H21.64V14.86H20.74C20.8406 15.2325 20.901 15.6147 20.92 16Z"
@@ -484,6 +532,7 @@
 
 
     </footer>
+    <script src="js/script.js"></script>
 
   </div>
 </body>
