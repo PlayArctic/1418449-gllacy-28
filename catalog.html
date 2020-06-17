@@ -18,7 +18,7 @@
           <a href="index.html">
             <img src="img/logo_gllacy.svg" alt="логотип glacyshop" class="logo">
           </a>
-          <a class="site-menu-active" href="catalog.html">Каталог</a>
+          <a class="site-menu-catalog site-menu-active" href="catalog.html">Каталог</a>
           <ul class="visually-hidden catalog-submenu">
             <li>
               <a href="new_offer.html">Новинки</a>
@@ -168,7 +168,10 @@
 
         <div class="filter filter-sort-by-wrp">
           <label for="sort-by">Сортировка</label>
-          <select name="sort-by" id="sort-by">
+          <svg class="menu-arrow" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.5 10L0 0H11" fill="#ECF1EE"/>
+          </svg>
+          <select class="sort-by-select" name="sort-by" id="sort-by">
             <option>по популярности</option>
             <option>по цене</option>
             <option>по отзывам</option>

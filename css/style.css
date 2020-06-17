@@ -218,13 +218,13 @@ img {
 }
 
 .site-menu-active[href]:hover {
-  /*!ИЗМЕНЯЕТЯ ВЫСОТА ПРИ ХОВЕРЕ!*/
   background-color: var(--current-page);
   color: var(--white);
 }
 
+
 .catalog-submenu {
-  display: flex;
+  display: none;
   z-index: 10;
   flex-direction: column;
   justify-content: space-around;
@@ -298,7 +298,7 @@ img {
   left: 16px;
 }
 
-.button-hover:hover .svg-menu path {
+.button-hover:hover .svg-menu path { /*!тройной селектор*/
   fill: var(--asphalt);
 }
 
@@ -530,16 +530,11 @@ img {
 /* Showcase */
 
 .showcase {
-  /*надпись ХИТ добавить*/
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  z-index: 10;
-  margin-bottom: 40px;
-  /* ! работало криво 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  column-gap: 26px;*/
+  column-gap: 26px;
+  z-index: 10;
+  margin-bottom: 40px;
   outline: 5px solid rgb(255, 255, 255); /*граница*/
 }
 
@@ -691,9 +686,6 @@ img {
 /* Blog new */
 
 .container.newsubscr {
-  /*display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 26px;*/ /*!почему-то работает криво. заменил на флекс*/
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -785,6 +777,7 @@ img {
   min-width: 1200px;
   min-height: 430px;
   background: url(../img/map-main7.jpg);
+  background-color: var(--white-transparent-popup); /*если карта не загрузится*/
 }
 
 .feedback-container {
@@ -864,7 +857,7 @@ img {
 }
 
 .page-item:last-child {
-  /*margin-right:26px;*/ /*!работает не так как в демо 28/28*/
+  margin-right:26px; /*!у меня добавляет отступы всем li.демо 28/28*/
 }
 
 .paginator li:last-of-type::after {
@@ -1181,7 +1174,10 @@ h1 {
 }
 
 /* Sort by*/
+
+
 .filter-sort-by-wrp {
+  position: relative;
   max-width: 196px;
   max-height: 56px;
 }
@@ -1205,10 +1201,23 @@ h1 {
   text-align: center;
   padding-left: 16px;
   padding-right: 16px;
+  -webkit-appearance: none; /*убираем стрелку*/
+  -moz-appearance: none; /*убираем стрелку*/
+  appearance: none; /*убираем стрелку*/
 }
 
 .filter-sort-by-wrp select:hover {
   color: var(--asphalt);
+}
+
+.sort-by-select:hover .menu-arrow path { /*!тройной селектор*/
+  fill: var(--asphalt); /*@@*/
+}
+
+.filter-sort-by-wrp svg {
+  position: absolute;
+  top: 31px;
+  left: 171px;
 }
 
 .filter-sort-by-wrp option {
@@ -1492,6 +1501,11 @@ input::-webkit-inner-spin-button {
 
 .visually-hidden {
   display: none;
+}
+
+/*!изменение класса по hover для catalog submenu*/
+.site-menu-catalog:hover .catalog-submenu {
+  display: flex;
 }
 
 .visually-show {
