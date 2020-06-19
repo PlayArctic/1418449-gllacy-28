@@ -69,6 +69,10 @@
   border-radius: 50px;
 }
 
+.button:focus {
+  border: none;
+}
+
 input:active {
   border: none; /*!как убрать обводку*/
 }
