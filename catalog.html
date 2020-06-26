@@ -61,10 +61,10 @@
           <section class="visually-hidden login-form">
             <h2 class="visually-hidden">Форма авторизации</h2>
             <form action="https://echo.htmlacademy.ru/courses" method="post">
-              <input type="email" placeholder="email@example.com" name="authoriz_email" id="authoriz_email"
+              <input type="email" placeholder="  email@example.com" name="authoriz_email" id="authoriz_email"
                 class="authoriz_email">
               <label for="authoriz_email" class="visually-hidden">Авторизация. Введите email</label>
-              <input type="password" placeholder="******" name="authoriz_pswrd" id="authoriz_pswrd"
+              <input type="password" placeholder="  ......" name="authoriz_pswrd" id="authoriz_pswrd"
                 class="authoriz_pswrd">
               <label for="authoriz_pswrd" class="visually-hidden">Авторизация. Введите пароль</label>
             </form>
@@ -77,8 +77,8 @@
             </div>
           </section>
 
-          <a class="button-hover cart" href="#" aria-label="Корзина">
-            <svg class="svg-menu" width="21" height="20" viewBox="0 0 21 20" fill="none"
+          <a class="button-hover cart-full" href="#" aria-label="Корзина">
+            <svg class="svg-menu visually-hidden" width="21" height="20" viewBox="0 0 21 20" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M5.70345 2L5.46161 0H0V2H3.66795L5.17946 15H19.2869L21 2H5.70345ZM17.5034 13H6.97313L5.96545 4H18.6924L17.5034 13Z"
@@ -90,14 +90,14 @@
                 d="M16.1027 20C17.2157 20 18.118 19.1046 18.118 18C18.118 16.8954 17.2157 16 16.1027 16C14.9896 16 14.0873 16.8954 14.0873 18C14.0873 19.1046 14.9896 20 16.1027 20Z"
                 fill="white" />
             </svg>
-            <span class="menu-text-cart">Пусто</span>
+            <span class="menu-text-cart">2 товара</span>
           </a>
           <section class="cart-field visually-hidden">
             <h2 class="visually-hidden">Корзина</h2>
             <table>
               <tr>
                 <td>
-                  <button class="cart-cross"><img src="img/cross-big.svg" alt="убрать из корзины"></button>
+                  <button class="cart-cross"><img src="img/cross-small.svg" alt="убрать из корзины"></button>
                 </td>
                 <td><img class="cart-img" src="img/ice_with_orange.png"
                     alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></td>
@@ -113,12 +113,12 @@
               </tr>
               <tr>
                 <td>
-                  <button class="cart-cross"><img src="img/cross-big.svg" alt="убрать из корзины"></button>
+                  <button class="cart-cross"><img src="img/cross-small.svg" alt="убрать из корзины"></button>
                 </td>
                 <td><img class="cart-img" src="img/ice_strawberry.png"
                     alt="Сливочно-клубничное с присыпкой из белого шоколада"></td>
                 <td>
-                  <p>Клубничный пломбир с присыпкой из белого шоколада</p>
+                  <p>Клубничный пломбир с присыпкой<br>из белого шоколада</p>
                 </td>
                 <td>
                   <p><span class="mult-price">1,5кг х </span><span class="transp-price">300 руб.</span></p>
@@ -128,7 +128,6 @@
                 </td>
               </tr>
             </table>
-            <hr>
             <p class="total-amount">Итого: 750 руб.</p>
             <a class="cart-button button" href="https://ordersubmit.html">Оформить заказ</a>
           </section>
@@ -140,7 +139,7 @@
         <div class="work-time">
           <h2 class="visually-hidden">Время работы</h2>
           <p>
-            С 10 до 20, ежедневно<br>
+            с 10 до 20, ежедневно<br>
             <span class="work-time-bold">8 812 450-25-25</span>
           </p>
         </div>
@@ -168,14 +167,16 @@
 
         <div class="filter filter-sort-by-wrp">
           <label for="sort-by">Сортировка</label>
-          <svg class="menu-arrow" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5.5 10L0 0H11" fill="#ECF1EE"/>
           </svg>
           <select class="sort-by-select" name="sort-by" id="sort-by">
             <option>по популярности</option>
             <option>по цене</option>
             <option>по отзывам</option>
           </select>
+          <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.5 10L0 0H11" fill="#ECF1EE"/>
+          </svg>
+            
         </div>
 
         <fieldset class="filter filter-item">
@@ -185,7 +186,7 @@
             <div class="price-controls">
               <label class="min-price">
                 <input type="number" name="min-price" value="100" step="50" min="0" max="450">
-                ₽ – </label>
+                 ₽ – </label>
               <label class="max-price">
                 <input type="number" name="max-price" value="500" step="50" min="50" max="500">
                 ₽</label>
@@ -212,7 +213,7 @@
           <ul class="fat-list">
             <li>
               <input class="visually-hidden fat-item" type="radio" name="fat-content" value="0%" id="filter-fat-0">
-              <label for="filter-fat-0">0%</label>
+              <label for="filter-fat-0" class="filter-fat-0">0%</label>
             </li>
             <li>
               <input class="visually-hidden fat-item" type="radio" name="fat-content" value="<10%" id="filter-fat-under-10%" checked>
@@ -234,23 +235,23 @@
           <ul class="filler-list">
             <li>
               <input class="visually-hidden filler-item" type="checkbox" name="chocolate" id="filter-chocolate" checked>
-              <label for="filter-chocolate">Шоколадные</label>
+              <label for="filter-chocolate">шоколадные</label>
             </li>
             <li>
               <input class="visually-hidden filler-item" type="checkbox" name="sugar-powder" id="filter-sugar-powder" checked>
-              <label for="filter-sugar-powder">Сахарные присыпки</label>
+              <label for="filter-sugar-powder">сахарные присыпки</label>
             </li>
             <li>
               <input class="visually-hidden filler-item" type="checkbox" name="fruits" id="filter-fruits">
-              <label for="filter-fruits">Фрукты</label>
+              <label for="filter-fruits">фрукты</label>
             </li>
             <li>
               <input class="visually-hidden filler-item" type="checkbox" name="syrup" id="filter-syrup">
-              <label for="filter-syrup">Сиропы</label>
+              <label for="filter-syrup">сиропы</label>
             </li>
             <li>
               <input class="visually-hidden filler-item" type="checkbox" name="jam" id="filter-jam">
-              <label for="filter-jam">Джемы</label>
+              <label for="filter-jam">джемы</label>
             </li>
           </ul>
         </fieldset>
@@ -268,7 +269,7 @@
               <img class="showcase-img" src="img/ice_with_orange.png"
                 alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
             </a>
-            <p>310 ₽<span>/кг</span></p>
+            <p>310 ₽<span class="weight">/кг</span></p>
             <h2>Сливочное с апельсиновым джемом и цитрусовой стружкой</h2>
             <div class="showcase-button button visually-hidden">
               <a class="hidden" href="#">Быстрый просмотр</a>
@@ -281,7 +282,7 @@
             <a href="#">
               <img class="showcase-img" src="img/ice_cofee.png" alt="Сливочно-кофейное с кусочками шоколада">
             </a>
-            <p>380 ₽<span>/кг</span></p>
+            <p>380 ₽<span class="weight">/кг</span></p>
             <h2>Сливочно-кофейное с кусочками шоколада</h2>
             <div class="showcase-button button visually-hidden">
               <a class="hidden" href="#">Быстрый просмотр</a>
@@ -295,7 +296,7 @@
               <img class="showcase-img" src="img/ice_strawberry.png"
                 alt="Сливочно-клубничное с присыпкой из белого шоколада">
             </a>
-            <p>355 ₽<span>/кг</span></p>
+            <p>355 ₽<span class="weight">/кг</span></p>
             <h2>Сливочно-клубничное с присыпкой из белого шоколада</h2>
             <div class="showcase-button button visually-hidden">
               <a class="hidden" href="#">Быстрый просмотр</a>
@@ -308,8 +309,8 @@
             <a href="#">
               <img class="showcase-img" src="img/ice_brulee.png" alt="Сливочное крем-брюле с карамельной подливкой">
             </a>
-            <p>415 ₽<span>/кг</span></p>
-            <h2>Сливочное крем-брюле с карамельной подливкой</h2>
+            <p>415 ₽<span class="weight">/кг</span></p>
+            <h2>Сливочное крем-брюле<br>с карамельной подливкой</h2>
             <div class="showcase-button button visually-hidden">
               <a class="hidden" href="#">Быстрый просмотр</a>
             </div>
@@ -321,8 +322,8 @@
             <a href="#">
               <img class="showcase-img" src="img/ice_cowberry.png" alt="Сливочное с брусничным джемом">
             </a>
-            <p>325 ₽<span>/кг</span></p>
-            <h2>Сливочное с брусничным джемом</h2>
+            <p>325 ₽<span class="weight">/кг</span></p>
+            <h2>Сливочное с брусничным<br>джемом</h2>
             <div class="showcase-button button visually-hidden">
               <a class="hidden" href="#">Быстрый просмотр</a>
             </div>
@@ -334,7 +335,7 @@
             <a href="#">
               <img class="showcase-img" src="img/ice_blueberry.png" alt="Сливочно-черничное с цельными ягодами черники">
             </a>
-            <p>410 ₽<span>/кг</span></p>
+            <p>410 ₽<span class="weight">/кг</span></p>
             <h2>Сливочно-черничное с цельными ягодами черники</h2>
             <div class="showcase-button button visually-hidden">
               <a class="hidden" href="#">Быстрый просмотр</a>
@@ -347,7 +348,7 @@
             <a href="#">
               <img class="showcase-img" src="img/ice_lemon.png" alt="Сливочно-лимонное с карамельной присыпкой">
             </a>
-            <p>315 ₽<span>/кг</span></p>
+            <p>315 ₽<span class="weight">/кг</span></p>
             <h2>Сливочно-лимонное с карамельной присыпкой</h2>
             <div class="showcase-button button visually-hidden">
               <a class="hidden" href="#">Быстрый просмотр</a>
@@ -360,7 +361,7 @@
             <a href="#">
               <img class="showcase-img" src="img/ice_choko.png" alt="Сливочное с шоколадной стружкой">
             </a>
-            <p>320 ₽<span>/кг</span></p>
+            <p>320 ₽<span class="weight">/кг</span></p>
             <h2>Сливочное с шоколадной стружкой</h2>
             <div class="showcase-button button visually-hidden">
               <a class="hidden" href="#">Быстрый просмотр</a>
@@ -373,8 +374,8 @@
             <a href="#">
               <img class="showcase-img" src="img/ice_vanilla.png" alt="Сливочно-ванильное с кусочками шоколада">
             </a>
-            <p>440 ₽<span>/кг</span></p>
-            <h2>Сливочно-ванильное с кусочками шоколада</h2>
+            <p>440 ₽<span class="weight">/кг</span></p>
+            <h2>Сливочно-ванильное<br>с кусочками шоколада</h2>
             <div class="showcase-button button visually-hidden">
               <a class="hidden" href="#">Быстрый просмотр</a>
             </div>
@@ -386,8 +387,8 @@
             <a href="#">
               <img class="showcase-img" src="img/ice_menthol.png" alt="Сливочноe с ментоловым сиропом">
             </a>
-            <p>435 ₽<span>/кг</span></p>
-            <h2>Сливочноe с ментоловым сиропом</h2>
+            <p>435 ₽<span class="weight">/кг</span></p>
+            <h2>Сливочноe с ментоловым<br>сиропом</h2>
             <div class="showcase-button button visually-hidden">
               <a class="hidden" href="#">Быстрый просмотр</a>
             </div>
@@ -399,7 +400,7 @@
             <a href="#">
               <img class="showcase-img" src="img/ice_dark_choko.png" alt="Сливочное с кусочками черного шоколада">
             </a>
-            <p>355 ₽<span>/кг</span></p>
+            <p>355 ₽<span class="weight">/кг</span></p>
             <h2>Сливочное с кусочками черного шоколада</h2>
             <div class="showcase-button button visually-hidden">
               <a class="hidden" href="#">Быстрый просмотр</a>
@@ -412,7 +413,7 @@
             <a href="#">
               <img class="showcase-img" src="img/ice_mint.png" alt="Сливочное с мятным сиропом">
             </a>
-            <p>420 ₽<span>/кг</span></p>
+            <p>420 ₽<span class="weight">/кг</span></p>
             <h2>Сливочное с мятным сиропом</h2>
             <div class="showcase-button button visually-hidden">
               <a class="hidden" href="#">Быстрый просмотр</a>
@@ -422,20 +423,20 @@
       </ul>
 
       <ul class="paginator container">
-        <li>
-          <a class="page-item page-active" href="#">1</a>
+        <li class="page-item page-active">
+          <a href="#">1</a>
         </li>
-        <li>
-          <a class="page-item page-inactive" href="#">2</a>
+        <li class="page-item page-inactive">
+          <a href="#">2</a>
         </li>
-        <li>
-          <a class="page-item page-inactive" href="#">3</a>
+        <li class="page-item page-inactive">
+          <a href="#">3</a>
         </li>
-        <li>
-          <a class="page-item page-inactive" href="#">4</a>
+        <li class="page-item page-inactive">
+          <a href="#">4</a>
         </li>
-        <li>
-          <a class="page-item page-inactive" href="#">5</a>
+        <li class="page-item page-inactive">
+          <a href="#">5</a>
         </li>
       </ul>
 
@@ -446,35 +447,6 @@
         <section class="social">
           <h2 class="visually-hidden">Мы в соцсетях</h2>
           <ul>
-            <li>
-              <a href="https://twitter.com/explore" aria-label="twitter">
-                <svg class="svg-social" width="32" height="32" viewBox="0 0 32 32" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M16 0C12.8355 0 9.74207 0.938384 7.11088 2.69649C4.4797 4.45459 2.42894 6.95345 1.21793 9.87706C0.0069325 12.8007 -0.309921 16.0177 0.307443 19.1214C0.924806 22.2251 2.44866 25.0761 4.6863 27.3137C6.92394 29.5513 9.77487 31.0752 12.8786 31.6926C15.9823 32.3099 19.1993 31.9931 22.1229 30.7821C25.0466 29.5711 27.5454 27.5203 29.3035 24.8891C31.0616 22.2579 32 19.1645 32 16C32 11.7565 30.3143 7.68687 27.3137 4.68629C24.3131 1.68571 20.2435 0 16 0ZM23.94 12.81C23.69 19.33 20.48 23.64 12.94 23.51H12.46C12.01 23.51 7.91001 23.07 7.11001 21.69C8.8989 21.9555 10.7228 21.5494 12.23 20.55C11.18 20.26 9.31001 20.09 8.98001 17.7C9.39279 17.8642 9.84415 17.9058 10.28 17.82C9.00001 17 7.53001 16.3 7.61001 14.17C8.02796 14.4893 8.54454 14.652 9.07001 14.63C8.30001 14.4 6.92001 11.39 8.07001 9.85C10.07 11.64 12.14 13.33 15.87 13.49C16.1 11.28 17.11 9.79 19.04 9.17C19.7375 8.93332 20.4908 8.91568 21.1986 9.11946C21.9065 9.32323 22.5351 9.73867 23 10.31C23.74 10.08 24.45 9.84 25.19 9.62C25.1758 9.95711 25.0846 10.2865 24.9234 10.5829C24.7622 10.8793 24.5353 11.1349 24.26 11.33C24.5167 11.3601 24.7768 11.3336 25.0221 11.2524C25.2674 11.1712 25.492 11.0372 25.68 10.86C25.5628 11.2985 25.3443 11.7034 25.0421 12.0421C24.7399 12.3808 24.3624 12.6438 23.94 12.81Z"
-                    fill="white" fill-opacity="0.8" />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/" aria-label="instagram">
-                <svg class="svg-social" width="32" height="32" viewBox="0 0 32 32" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <g opacity="0.8">
-                    <path
-                      d="M20.92 16C20.92 17.3155 20.3974 18.5771 19.4673 19.5072C18.5371 20.4374 17.2755 20.96 15.96 20.96C14.6445 20.96 13.3829 20.4374 12.4528 19.5072C11.5226 18.5771 11 17.3155 11 16C11.001 15.6158 11.048 15.233 11.14 14.86H10.24V21.7H21.64V14.86H20.74C20.8406 15.2325 20.901 15.6147 20.92 16Z"
-                      fill="white" />
-                    <path
-                      d="M16 18.66C16.5252 18.656 17.0375 18.4967 17.4723 18.202C17.9071 17.9073 18.245 17.4905 18.4432 17.0042C18.6415 16.5178 18.6913 15.9836 18.5864 15.4689C18.4816 14.9542 18.2266 14.4821 17.8539 14.1121C17.4811 13.7421 17.0071 13.4908 16.4916 13.3897C15.9762 13.2887 15.4424 13.3425 14.9575 13.5445C14.4726 13.7464 14.0584 14.0873 13.7669 14.5243C13.4755 14.9613 13.32 15.4748 13.32 16C13.3213 16.3506 13.3917 16.6976 13.5271 17.021C13.6625 17.3444 13.8602 17.638 14.1091 17.8851C14.358 18.1321 14.653 18.3276 14.9775 18.4606C15.3019 18.5936 15.6494 18.6613 16 18.66Z"
-                      fill="white" />
-                    <path d="M21.68 10.3H18.64V13.34H21.68V10.3Z" fill="white" />
-                    <path
-                      d="M16 0C12.8355 0 9.74207 0.938384 7.11088 2.69649C4.4797 4.45459 2.42894 6.95345 1.21793 9.87706C0.0069325 12.8007 -0.309921 16.0177 0.307443 19.1214C0.924806 22.2251 2.44866 25.0761 4.6863 27.3137C6.92394 29.5513 9.77487 31.0752 12.8786 31.6926C15.9823 32.3099 19.1993 31.9931 22.1229 30.7821C25.0466 29.5711 27.5454 27.5203 29.3035 24.8891C31.0616 22.2579 32 19.1645 32 16C32 11.7565 30.3143 7.68687 27.3137 4.68629C24.3131 1.68571 20.2435 0 16 0ZM24 21.7C24.0027 22.0045 23.9444 22.3064 23.8285 22.588C23.7127 22.8696 23.5416 23.1251 23.3253 23.3395C23.1091 23.5539 22.8521 23.7228 22.5695 23.8362C22.2869 23.9497 21.9845 24.0054 21.68 24H10.28C9.97928 23.9987 9.68175 23.9382 9.40442 23.8219C9.12709 23.7056 8.87537 23.5358 8.66366 23.3222C8.45194 23.1086 8.28436 22.8554 8.17049 22.5771C8.05662 22.2988 7.99869 22.0007 8.00001 21.7V10.3C7.99869 9.99927 8.05662 9.70123 8.17049 9.42289C8.28436 9.14455 8.45194 8.89137 8.66366 8.67779C8.87537 8.46422 9.12709 8.29443 9.40442 8.17814C9.68175 8.06184 9.97928 8.00131 10.28 8H21.67C21.9749 7.99467 22.2778 8.0503 22.561 8.16362C22.8441 8.27694 23.1017 8.44568 23.3188 8.65992C23.5358 8.87416 23.7079 9.12959 23.8249 9.41123C23.9418 9.69287 24.0014 9.99504 24 10.3V21.7Z"
-                      fill="white" />
-                  </g>
-                </svg>
-              </a>
-            </li>
             <li>
               <a href="https://www.facebook.com/" aria-label="facebook">
                 <svg class="svg-social" width="32" height="32" viewBox="0 0 32 32" fill="none"
@@ -497,6 +469,36 @@
                     fill="white" fill-opacity="0.8" />
                   <path
                     d="M16 0C12.8355 0 9.74207 0.938384 7.11088 2.69649C4.4797 4.45459 2.42894 6.95345 1.21793 9.87706C0.0069325 12.8007 -0.309921 16.0177 0.307443 19.1214C0.924806 22.2251 2.44866 25.0761 4.6863 27.3137C6.92394 29.5513 9.77487 31.0752 12.8786 31.6926C15.9823 32.3099 19.1993 31.9931 22.1229 30.7821C25.0466 29.5711 27.5454 27.5203 29.3035 24.8891C31.0616 22.2579 32 19.1645 32 16C32 11.7565 30.3143 7.68687 27.3137 4.68629C24.3131 1.68571 20.2435 0 16 0ZM22.6 20.53C22.3376 21.056 21.9537 21.5119 21.48 21.86C20.9342 22.2714 20.3122 22.5705 19.65 22.74C18.8286 22.9383 17.9848 23.029 17.14 23.01H11V9H16.45C17.2781 8.9868 18.1063 9.02354 18.93 9.11C19.473 9.19401 19.9994 9.36273 20.49 9.61C20.9868 9.84615 21.4013 10.2258 21.68 10.7C21.9455 11.1728 22.0801 11.7079 22.07 12.25C22.0819 12.8916 21.8931 13.5209 21.53 14.05C21.1452 14.588 20.6142 15.0045 20 15.25V15.32C20.8272 15.4588 21.5898 15.8541 22.18 16.45C22.7295 17.0712 23.0163 17.8815 22.98 18.71C23.0043 19.3386 22.8738 19.9636 22.6 20.53Z"
+                    fill="white" fill-opacity="0.8" />
+                </svg>
+              </a>
+            </li>
+            
+            <li>
+              <a href="https://www.instagram.com/" aria-label="instagram">
+                <svg class="svg-social" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g opacity="0.8">
+                    <path
+                      d="M20.92 16C20.92 17.3155 20.3974 18.5771 19.4673 19.5072C18.5371 20.4374 17.2755 20.96 15.96 20.96C14.6445 20.96 13.3829 20.4374 12.4528 19.5072C11.5226 18.5771 11 17.3155 11 16C11.001 15.6158 11.048 15.233 11.14 14.86H10.24V21.7H21.64V14.86H20.74C20.8406 15.2325 20.901 15.6147 20.92 16Z"
+                      fill="white" />
+                    <path
+                      d="M16 18.66C16.5252 18.656 17.0375 18.4967 17.4723 18.202C17.9071 17.9073 18.245 17.4905 18.4432 17.0042C18.6415 16.5178 18.6913 15.9836 18.5864 15.4689C18.4816 14.9542 18.2266 14.4821 17.8539 14.1121C17.4811 13.7421 17.0071 13.4908 16.4916 13.3897C15.9762 13.2887 15.4424 13.3425 14.9575 13.5445C14.4726 13.7464 14.0584 14.0873 13.7669 14.5243C13.4755 14.9613 13.32 15.4748 13.32 16C13.3213 16.3506 13.3917 16.6976 13.5271 17.021C13.6625 17.3444 13.8602 17.638 14.1091 17.8851C14.358 18.1321 14.653 18.3276 14.9775 18.4606C15.3019 18.5936 15.6494 18.6613 16 18.66Z"
+                      fill="white" />
+                    <path d="M21.68 10.3H18.64V13.34H21.68V10.3Z" fill="white" />
+                    <path
+                      d="M16 0C12.8355 0 9.74207 0.938384 7.11088 2.69649C4.4797 4.45459 2.42894 6.95345 1.21793 9.87706C0.0069325 12.8007 -0.309921 16.0177 0.307443 19.1214C0.924806 22.2251 2.44866 25.0761 4.6863 27.3137C6.92394 29.5513 9.77487 31.0752 12.8786 31.6926C15.9823 32.3099 19.1993 31.9931 22.1229 30.7821C25.0466 29.5711 27.5454 27.5203 29.3035 24.8891C31.0616 22.2579 32 19.1645 32 16C32 11.7565 30.3143 7.68687 27.3137 4.68629C24.3131 1.68571 20.2435 0 16 0ZM24 21.7C24.0027 22.0045 23.9444 22.3064 23.8285 22.588C23.7127 22.8696 23.5416 23.1251 23.3253 23.3395C23.1091 23.5539 22.8521 23.7228 22.5695 23.8362C22.2869 23.9497 21.9845 24.0054 21.68 24H10.28C9.97928 23.9987 9.68175 23.9382 9.40442 23.8219C9.12709 23.7056 8.87537 23.5358 8.66366 23.3222C8.45194 23.1086 8.28436 22.8554 8.17049 22.5771C8.05662 22.2988 7.99869 22.0007 8.00001 21.7V10.3C7.99869 9.99927 8.05662 9.70123 8.17049 9.42289C8.28436 9.14455 8.45194 8.89137 8.66366 8.67779C8.87537 8.46422 9.12709 8.29443 9.40442 8.17814C9.68175 8.06184 9.97928 8.00131 10.28 8H21.67C21.9749 7.99467 22.2778 8.0503 22.561 8.16362C22.8441 8.27694 23.1017 8.44568 23.3188 8.65992C23.5358 8.87416 23.7079 9.12959 23.8249 9.41123C23.9418 9.69287 24.0014 9.99504 24 10.3V21.7Z"
+                      fill="white" />
+                  </g>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/explore" aria-label="twitter">
+                <svg class="svg-social" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16 0C12.8355 0 9.74207 0.938384 7.11088 2.69649C4.4797 4.45459 2.42894 6.95345 1.21793 9.87706C0.0069325 12.8007 -0.309921 16.0177 0.307443 19.1214C0.924806 22.2251 2.44866 25.0761 4.6863 27.3137C6.92394 29.5513 9.77487 31.0752 12.8786 31.6926C15.9823 32.3099 19.1993 31.9931 22.1229 30.7821C25.0466 29.5711 27.5454 27.5203 29.3035 24.8891C31.0616 22.2579 32 19.1645 32 16C32 11.7565 30.3143 7.68687 27.3137 4.68629C24.3131 1.68571 20.2435 0 16 0ZM23.94 12.81C23.69 19.33 20.48 23.64 12.94 23.51H12.46C12.01 23.51 7.91001 23.07 7.11001 21.69C8.8989 21.9555 10.7228 21.5494 12.23 20.55C11.18 20.26 9.31001 20.09 8.98001 17.7C9.39279 17.8642 9.84415 17.9058 10.28 17.82C9.00001 17 7.53001 16.3 7.61001 14.17C8.02796 14.4893 8.54454 14.652 9.07001 14.63C8.30001 14.4 6.92001 11.39 8.07001 9.85C10.07 11.64 12.14 13.33 15.87 13.49C16.1 11.28 17.11 9.79 19.04 9.17C19.7375 8.93332 20.4908 8.91568 21.1986 9.11946C21.9065 9.32323 22.5351 9.73867 23 10.31C23.74 10.08 24.45 9.84 25.19 9.62C25.1758 9.95711 25.0846 10.2865 24.9234 10.5829C24.7622 10.8793 24.5353 11.1349 24.26 11.33C24.5167 11.3601 24.7768 11.3336 25.0221 11.2524C25.2674 11.1712 25.492 11.0372 25.68 10.86C25.5628 11.2985 25.3443 11.7034 25.0421 12.0421C24.7399 12.3808 24.3624 12.6438 23.94 12.81Z"
                     fill="white" fill-opacity="0.8" />
                 </svg>
               </a>
@@ -528,7 +530,7 @@
       <div>
         <section class="developer">
           <h2 class="visually-hidden">Разработка сайта</h2>
-          <img src="img/logo_html_academy.png" alt="логотип htmlacademy">
+          <img src="img/logo_html_academy.svg" alt="логотип htmlacademy">
           <a href="https://htmlacademy.ru">Сделано в HTML Academy © 2019</a>
         </section>
       </div>

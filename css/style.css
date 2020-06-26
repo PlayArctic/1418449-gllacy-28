@@ -54,7 +54,7 @@
   font-size: 18px;
   line-height: 24px;
   box-shadow: 0px 2px 2px var(--box-shadow);
-  text-shadow: 0px 2px 5px var(--text-shadow);
+  text-shadow: 0px 2px 2px var(--text-shadow);
   border: none;
 }
 
@@ -71,10 +71,6 @@
 
 .button:focus {
   border: none;
-}
-
-input:active {
-  border: none; /*!как убрать обводку*/
 }
 
 body {
@@ -133,7 +129,7 @@ img {
   display: flex;
   list-style: none;
   color: var(--white);
-  margin-bottom: 9px;
+  margin-top: -28px;
 }
 
 .breadcrumbs a,
@@ -159,7 +155,6 @@ img {
 }
 
 .site-navigation {
-  outline: 5px solid red; /*граница*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -171,17 +166,25 @@ img {
   margin: 0;
   padding: 0;
 }
-
+/*!n*/
 .site-menu-inactive {
   display: inline-block;
-  padding-top: 9px;
-  padding-bottom: 11px;
+  padding-top: 6px;
+  padding-bottom: 7px;
   padding-left: 13px;
   padding-right: 13px;
   color: var(--white);
   font-weight: bold;
-  margin-right: 19px;
+  margin-right: 6.5px;
+  margin-bottom: 11px;
   border-radius: 26px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: underline;
+  text-decoration-color: var(--white-transparent);
 }
 
 .site-menu-inactive[href]:hover {
@@ -194,7 +197,7 @@ img {
   box-shadow: inset 0px 2px 1px var(--menu-button-shadow);
 }
 
-.site-menu-active:not(:first-of-type):hover,
+/*.site-menu-active:not(:first-of-type):hover,
 .user-navigation > a:hover[href] {
   background-color: var(--white);
   color: var(--asphalt);
@@ -202,30 +205,52 @@ img {
   font-size: 16px;
   line-height: 18px;
   text-decoration: none;
-}
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}*/
 
 .site-menu-active {
   background-color: var(--current-page);
-  text-decoration: none;
-  display: inline-block;
-  padding-top: 9px;
+  display: flex;
+  /*padding-top: 9px;
   padding-bottom: 11px;
-  padding-left: 13px;
-  padding-right: 13px;
+  padding-left: 14px;
+  padding-right: 14px;*/
+  justify-content: center;
+  align-items: center;
+  height: 31px;
+  width: 89px;
   color: var(--white);
   font-weight: bold;
-  margin-right: 19px;
+  margin-right: 4px;
+  margin-bottom: 11px;
   border-radius: 26px;
-  font-size: 16px;
-  line-height: 18px;
-
+  text-decoration: none;
 }
 
 .site-menu-active[href]:hover {
+  /*для деактивации белого ховера*/
   background-color: var(--current-page);
+  display: flex;
+  /*padding-top: 9px;
+  padding-bottom: 11px;
+  padding-left: 14px;
+  padding-right: 14px;*/
+  justify-content: center;
+  align-items: center;
+  height: 31px;
+  width: 89px;
   color: var(--white);
+  font-weight: bold;
+  margin-right: 4px;
+  margin-bottom: 11px;
+  border-radius: 26px;
 }
 
+/*!n*/
 
 .catalog-submenu {
   display: none;
@@ -233,8 +258,8 @@ img {
   flex-direction: column;
   justify-content: space-around;
   position: absolute;
-  left: 191px;
-  top: 60px;
+  left: 157px;
+  top: 50px;
   min-width: 143px;
   background-color: var(--white);
   box-shadow: 0px 20px 20px var(--box-shadow-menu);
@@ -263,23 +288,24 @@ img {
   color: var(--asphalt);
 }
 
+
 .catalog-submenu li:first-child {
   padding: 0px;
   margin: 0px;
   font-weight: bold;
   font-size: 14px;
   line-height: 18px;
+  margin-bottom: 6px;
 }
 
 .site-navigation img {
-  margin-right: 24px;
+  margin-right: 11px;
 }
 
 .user-navigation {
   display: flex;
   position: relative;
   align-items: center;
-  outline: 5px solid green; /*граница*/
 }
 
 .separator {
@@ -292,17 +318,26 @@ img {
   background-color: #fbded7;
 }
 
+.catalog-submenu li:active:not(:first-child) {
+  background-color: #F6B5A5;
+}
+
+
+
+
 .user-navigation > a {
-  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .login svg,
 .cart svg {
   position: absolute;
   left: 16px;
+  top: 6px;
 }
 
-.button-hover:hover .svg-menu path { /*!тройной селектор*/
+.button-hover:hover .svg-menu path {
+  /*!тройной селектор*/
   fill: var(--asphalt);
 }
 
@@ -328,6 +363,11 @@ img {
   vertical-align: middle; /*! не работает для img*/
   align-items: center;
   border-radius: 20px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .user-navigation .search {
@@ -346,16 +386,56 @@ img {
   min-height: 32px;
 }
 
+.user-navigation .cart-full {
+  position: relative;
+  min-width: 118px;
+  min-height: 32px;
+  background-color: var(--white);
+  color: var(--asphalt);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.cart-full::before {
+  position: absolute;
+  content: url(../img/cart-full.svg);
+  top: 6px;
+  left: 16px;
+}
+
+.cart-full svg {
+  position: absolute;
+  left: 16px;
+  top: 6px;
+}
+
 .work-time-bold {
+  display: block;
   font-weight: bold;
   font-size: 22px;
   line-height: 24px;
+  margin-top: 8px;
 }
 
 .work-time {
-  /*!margin-left: auto; перестало работать. включил флекс*/
   display: flex;
   justify-content: flex-end;
+  margin-top: -3px;
+  margin-right: 0.5px;
+  text-align: right;
+}
+
+.work-time p {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 /* Slider */
@@ -401,7 +481,7 @@ img {
 .slide-title {
   max-width: 672px;
   margin: 0 auto;
-  margin-bottom: 27px;
+  margin-bottom: 26px;
   font-weight: bold;
   font-size: 60px;
   line-height: 60px;
@@ -411,6 +491,7 @@ img {
   /*убирае отступы списка по умлочанию*/
   margin: 0;
   padding: 0;
+  margin-top: -46px;
   list-style: none;
 }
 
@@ -420,10 +501,13 @@ img {
   height: 63px;
   justify-content: center;
   align-items: center;
-  font-size: 32px;
-  line-height: 44px;
   text-decoration: none;
   margin-bottom: 40px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 44px;
 }
 
 .slider-item {
@@ -449,6 +533,7 @@ img {
   border-radius: 50%;
   background-color: transparent;
   cursor: pointer;
+  margin-right: 4px;
 }
 
 .slider-controls .current {
@@ -465,7 +550,6 @@ img {
 /* Features */
 
 .features-wrapper {
-  outline: 5px solid rgb(44, 202, 189); /*граница*/
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -475,6 +559,8 @@ img {
 
 .features-raspb h2,
 .features-choko h2 {
+  margin: 0;
+  margin-top: 16px;
   font-weight: bold;
   font-size: 35px;
   line-height: 41px;
@@ -487,6 +573,7 @@ img {
   font-size: 18px;
   line-height: 22px;
   padding-left: 16px;
+  margin-top: 17px;
 }
 
 .features-raspb a,
@@ -496,6 +583,7 @@ img {
 }
 
 .features-raspb {
+  position: relative;
   width: 560px;
   height: 229px;
   background-image: url(../img/raspberry_back.jpg);
@@ -505,6 +593,7 @@ img {
 }
 
 .features-choko {
+  position: relative;
   width: 560px;
   height: 229px;
   background-image: url(../img/choko_back.jpg);
@@ -514,21 +603,25 @@ img {
 }
 
 .button.strawb {
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 164px;
   height: 48px;
-  margin-left: 374px;
+  left: 374px;
+  top: 160px;
 }
 
 .button.choko {
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 191px;
   height: 48px;
-  margin-left: 347px;
+  left: 347px;
+  top: 161px;
 }
 
 /* Showcase */
@@ -538,8 +631,8 @@ img {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 26px;
   z-index: 10;
-  margin-bottom: 40px;
-  outline: 5px solid rgb(255, 255, 255); /*граница*/
+  margin-top: 34px;
+  grid-row-gap: 17px;
 }
 
 .showcase-item {
@@ -550,10 +643,9 @@ img {
   text-align: center;
   justify-content: center;
   align-items: center;
-  padding-left: 13px;
-  padding-right: 13px;
   padding-top: 6px;
 }
+
 
 .showcase-item:hover {
   background-color: var(--white-transparent-popup);
@@ -575,6 +667,7 @@ img {
 }
 
 .showcase h2 {
+  margin-top: 7px;
   font-weight: 500;
   font-size: 16px;
 }
@@ -587,6 +680,8 @@ img {
   font-size: 45px;
   line-height: 45px;
   margin: 0;
+  margin-top: 15px;
+  margin-left: -12px;
 }
 
 .showcase .weight {
@@ -622,8 +717,8 @@ img {
   position: absolute;
   z-index: 10;
   content: url(../img/hit.svg);
-  top: 10px;
-  left: 18px;
+  top: 8px;
+  left: 0px;
 }
 
 /* Advantages */
@@ -631,6 +726,8 @@ img {
 .advantages-items {
   position: relative;
   display: grid;
+  grid-row-gap: 2px;
+  grid-column-gap: 39px;
   grid-template-columns: repeat(2, 1fr);
 }
 
@@ -639,8 +736,10 @@ img {
   background-image: url(../img/vaffle_pattern2.jpg); /* ".." выходим из папки css на уровень вверх, и заходим в папку img */
   background-repeat: repeat;
   width: 1146px;
+  height: 306px;
   border-radius: 16px;
   margin-bottom: 40px;
+  margin-top: 27px;
 }
 
 .advantages h2 {
@@ -649,41 +748,48 @@ img {
   line-height: 30px;
   margin: 0;
   padding: 0;
-  padding-top: 24px;
-  padding-left: 20px;
+  padding-top: 25px;
+  margin-left: -7px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
 }
 
 .advantages-items p {
   font-size: 16px;
   line-height: 22px;
-  margin-left: 75px;
+  margin-left: 48px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  margin-bottom: 2px;
 }
 
 .advantages-items p:first-child::before {
   position: absolute;
-  top: 10px;
-  left: 21px;
+  top: 8px;
+  left: -7px;
   content: url(../img/ice_sundae2.svg);
 }
 
 .advantages-items p:nth-child(2)::before {
   position: absolute;
-  top: 10px;
-  left: 567px;
+  top: 7px;
+  left: 559px;
   content: url(../img/cow2.svg);
 }
 
 .advantages-items p:nth-child(3)::before {
   position: absolute;
-  top: 105px;
-  left: 21px;
+  top: 96px;
+  left: -7px;
   content: url(../img/eco2.svg);
 }
 
 .advantages-items p:nth-child(4)::before {
   position: absolute;
-  top: 105px;
-  left: 567px;
+  top: 95px;
+  left: 559px;
   content: url(../img/thermometr2.svg);
 }
 
@@ -693,7 +799,6 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  outline: 5px solid rgb(30, 255, 0); /*граница*/
   margin-bottom: 40px;
 }
 
@@ -703,7 +808,6 @@ img {
   width: 560px;
   height: 220px;
   border-radius: 16px;
-  outline: 5px solid rgb(0, 174, 255); /*граница*/
 }
 
 .blog-new {
@@ -716,13 +820,16 @@ img {
   font-size: 24px;
   line-height: 30px;
   font-weight: bold;
+  margin-top: -9px;
+  font-family: Roboto;
+  font-style: normal;
 }
 
 .blog-new h2 {
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
-  padding-top: 23px;
+  padding-top: 2px;
 }
 
 .blog-new a {
@@ -739,7 +846,6 @@ img {
   background-image: url(../img/post_back.png);
   width: 560px;
   height: 220px;
-  outline: 5px solid rgb(0, 255, 234); /*граница*/
 }
 
 .subscribtion {
@@ -750,29 +856,45 @@ img {
   width: 548px;
   height: 210px;
   padding-left: 20px;
-  margin-top: 5px;
+  margin-top: 2px;
   margin-left: 6px;
   margin-right: 6px;
 }
 
+.subscribtion p {
+  margin-top: 25px;
+  margin-bottom: 41px;
+}
+
 .subscribtion .input_email {
+  box-sizing: border-box;
   border: 1px solid var(--email-input-border);
   border-radius: 6px;
   width: 368px;
   height: 44px;
+  margin-right: 6px;
 }
+
+.subscribtion .input_email:focus-within {
+  border: 2px solid rgba(46, 136, 228, 0.52);
+}
+
+.subscribtion .input_email:hover {
+  border: 2px solid rgba(178, 178, 178, 0.52);
+}
+
 
 .subscribtion .button {
   width: 130px;
   height: 44px;
   border: none;
+  margin-bottom: 1px;
   box-shadow: 0px 2px 2px var(--box-shadow);
 }
 
 .container.news {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  outline: 5px solid var(--white-transparent); /*граница*/
 }
 
 /*Feedback */
@@ -793,6 +915,7 @@ img {
 }
 
 .feedback {
+  box-sizing: border-box;
   text-align: left;
   font-size: 14px;
   line-height: 20px;
@@ -811,6 +934,8 @@ img {
 .feedback p {
   font-size: 14px;
   line-height: 20px;
+  margin-top: -3px;
+  margin-bottom: 26px;
 }
 
 .feedback a {
@@ -832,7 +957,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 31px;
+  margin-top: 29px;
 }
 
 /*Paginator*/
@@ -842,14 +967,17 @@ img {
   display: flex;
   justify-content: flex-end;
   list-style: none;
-  margin-bottom: 27px;
-  margin-top: 80px;
+  margin-bottom: 31px;
+  margin-top: 63px;
+}
+
+.paginator a {
+  text-decoration: none;
+  color: var(--asphalt);
+
 }
 
 .paginator .page-item {
-  /*! НЕ СРАБОТАЛО ВЫРАВНИВАНИЕ ВЕРТ ! display: inline-block;
-  vertical-align: middle;
-  text-align: center;*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -857,23 +985,28 @@ img {
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  margin-right: 12px;
+  margin-right: 4px;
+  cursor: pointer;
 }
 
 .page-item:last-child {
-  margin-right:26px; /*!у меня добавляет отступы всем li.демо 28/28*/
+  margin-right: 26px;
 }
 
-.paginator li:last-of-type::after {
+.paginator li:last-child::after {
   position: absolute;
-  width:7px;
+  width: 7px;
   height: 12px;
-  background-image: url(../img/array-right-small.svg);
-  background-repeat: no-repeat;
-  background-color: red;
+  content: url(../img/array-right-small.svg);
+  top: 2px;
+  right: 27px;
 }
 
 .paginator .page-inactive {
+  color: var(--white);
+}
+
+.page-inactive a {
   color: var(--white);
 }
 
@@ -892,31 +1025,40 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  min-height: 70px;
-  border-top: 1px solid var(--white);
+  min-height: 103px;
+  /*border-top: 1px solid var(--white);*/
   padding-top: 18px;
 }
 
-.footer a:hover{
-  color: #FFBC9E;
+.footer a:hover {
+  color: #ffbc9e;
 }
 
 /* Social */
 .social ul {
+  margin: 0;
+  padding: 0;
   display: flex;
   list-style: none;
   text-decoration: none;
+  margin-left: -9px;
+  margin-top: 15px;
 }
 
 .social a {
   display: flex;
   justify-content: center;
   vertical-align: middle;
-  margin-left: 12px;
-  border: 2px solid var(--white-transparent-popup);
+  margin-left: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   width: 32px;
   height: 32px;
+}
+
+
+.social a:active {
+  border: 2px solid rgba(255, 255, 255, 0.7);;
 }
 
 .svg-social:hover path,
@@ -935,6 +1077,16 @@ img {
   line-height: 18px;
   list-style: none;
   color: var(--white);
+  margin: 0;
+  padding: 0;
+  margin-top: 14px;
+  margin-left: 25px;
+  grid-row-gap: 2px;
+}
+
+.add-info li:nth-child(2),
+.add-info li:nth-child(4) {
+  margin-left: -10px;
 }
 
 .add-info a {
@@ -943,7 +1095,7 @@ img {
 
 .add-info a:hover,
 .add-info a:active {
-  color: #FFBC9E;
+  color: #ffbc9e;
 }
 
 .add-info-bold {
@@ -952,8 +1104,8 @@ img {
 
 .add-info li:first-child::before {
   position: absolute;
-  top: 2px;
-  left: 19px;
+  top: 3px;
+  left: -22px;
   content: url(../img/heart.svg);
 }
 
@@ -973,11 +1125,16 @@ img {
 
 .developer a:hover,
 .developer a:active {
-  color: #FFBC9E;
+  color: #ffbc9e;
 }
 
 .developer img {
   align-self: flex-start; /*по дефолту флекс растягивает картинку*/
+  width: 108px;
+  height: 39px;
+  margin-top: -1px;
+  margin-bottom: 2px;
+  margin-left: -1px;
 }
 
 /* Modals */
@@ -987,8 +1144,8 @@ img {
 .search-field {
   z-index: 10;
   position: absolute;
-  top: 55px;
-  right: 222px;
+  top: 59px;
+  right: 212px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1007,15 +1164,29 @@ img {
   border: 1px solid var(--border-box-menu);
   box-sizing: border-box;
   border-radius: 4px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  padding-left: 24px;
 }
+
+.search-field input[type="search"]:focus-within {
+  border: 2px solid rgba(46, 136, 228, 0.52);
+}
+.search-field input[type="search"]:hover {
+  border: 2px solid rgba(178, 178, 178, 0.52);
+}
+
 
 /*Login form*/
 
 .login-form {
   z-index: 10;
   position: absolute;
-  top: 55px;
-  right: 120px;
+  top: 59px;
+  right: 110px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -1029,6 +1200,7 @@ img {
 
 .login-form .authoriz_pswrd {
   margin-top: 25px;
+  
 }
 
 .login-form .button {
@@ -1055,12 +1227,23 @@ img {
   height: 44px;
   border: 1px solid var(--border-box-menu);
   margin-left: 19px;
+  margin-top: 6px;
+  padding-left: 24px;
 }
+
+.login-form input[type="password"] {
+  margin-top: 20px;
+}
+
 
 .login-form input:focus,
 .login-form input:active {
   border: 2px solid rgba(46, 136, 228, 0.52);
   font-weight: bold; /*!как сделать жирный текст после ввода текста и перемещения фокуса?*/
+}
+
+.login-form input:hover {
+  border: 2px solid rgba(178, 178, 178, 0.52);
 }
 
 .login-form a {
@@ -1070,9 +1253,8 @@ img {
 }
 
 .login-form a:hover {
-  color: #E84D37;
+  color: #e84d37;
 }
-
 
 .login-form .registration {
   display: flex;
@@ -1092,8 +1274,8 @@ img {
 .cart-field {
   z-index: 10;
   position: absolute;
-  bottom: -227px;
-  right: 10px;
+  bottom: -223px;
+  right: 0px;
   width: 539px;
   height: 242px;
   font-size: 13px;
@@ -1103,15 +1285,69 @@ img {
   border-radius: 4px;
 }
 
+
+.cart-field tr {
+  display: inline-block;
+  margin:0;
+  padding:0;
+  margin-top: 12px;
+  margin-left: 2px;
+}
+
+.cart-field td {
+  display: inline-block;
+  margin:0;
+  padding:0;
+  margin-top:0px;
+  margin-left:0px;
+  color: var(--asphalt);
+}
+
+.cart-field td:nth-child(1) {
+  margin-top: -10px;
+  margin-left: 0px;
+}
+
+
+.cart-field td:nth-child(2) {
+  margin-top: 3px;
+  margin-left: -8px;
+}
+
+.cart-field td:nth-child(3) {
+  margin-top: 0px;
+  margin-left: 10px;
+}
+
+.cart-field td:nth-child(4) {
+  margin-top: 0px;
+  margin-left: 29px;
+}
+
+.cart-field td:nth-child(5) {
+  margin-top: 0px;
+  margin-left: 26px;
+}
+
 .cart-field p {
   color: var(--asphalt);
 }
 
 .cart-field .total-amount {
+  position: relative;
   font-weight: bold;
   font-size: 15px;
   text-align: end;
-  margin-right: 14px;
+  margin-right: 16px;
+  margin-top: 17px;
+  color: var(--asphalt);
+}
+
+.total-amount::before {
+  content: url(../img/cart-line.svg);
+  position: absolute;
+  top: -28px;
+  left: 16px;
 }
 
 .transp-price {
@@ -1128,9 +1364,15 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 16px;
 }
 
 .cart-button {
+  position: absolute;
   text-decoration: none;
   color: var(--white);
   margin-left: auto;
@@ -1143,16 +1385,25 @@ img {
 }
 
 .cart-cross {
+  position: relative;
+  left: -4px;
+  top: 2px;
   margin: 0;
   padding: 0;
   padding-left: 21px;
   padding-right: 9px;
   border: none;
   background: transparent;
+  border: none;
+  background-color: transparent;
 }
 
 h1 {
-  margin-bottom: 29px; /*!НЕ РАБОТАЕТ*/
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 41px;
 }
 
 /** Filter **/
@@ -1162,7 +1413,7 @@ h1 {
   flex-wrap: wrap;
   min-width: 869px;
   min-height: 130px;
-  margin-top: 29px;
+  margin-top: 27px;
 }
 
 .filter {
@@ -1179,19 +1430,18 @@ h1 {
 
 /* Sort by*/
 
-
 .filter-sort-by-wrp {
   position: relative;
   max-width: 196px;
   max-height: 56px;
 }
 
-.filter label,
-.filter legend {
+.filter > label,
+.filter > legend {
   font-size: 14px;
   line-height: 16px;
   margin-left: 16px;
-  margin-bottom: 7px;
+  margin-bottom: 6px;
 }
 
 .filter-sort-by-wrp select {
@@ -1205,23 +1455,25 @@ h1 {
   text-align: center;
   padding-left: 16px;
   padding-right: 16px;
+  margin-top: -1px;
   -webkit-appearance: none; /*убираем стрелку*/
   -moz-appearance: none; /*убираем стрелку*/
   appearance: none; /*убираем стрелку*/
+  cursor: pointer;
 }
 
-.filter-sort-by-wrp select:hover {
+.sort-by-select:hover {
   color: var(--asphalt);
-}
-
-.sort-by-select:hover .menu-arrow path { /*!тройной селектор*/
-  fill: var(--asphalt); /*@@*/
 }
 
 .filter-sort-by-wrp svg {
   position: absolute;
-  top: 31px;
+  top: 35px;
   left: 171px;
+}
+
+.sort-by-select:hover + svg path {
+  fill: var(--asphalt);
 }
 
 .filter-sort-by-wrp option {
@@ -1278,10 +1530,10 @@ h1 {
 }
 
 .toggle-min {
-  left: 30px;
+  left: 34px;
 }
 .toggle-max {
-  left: 134px;
+  left: 132px;
 }
 
 .price-controls input {
@@ -1292,6 +1544,12 @@ h1 {
   border: none;
   color: var(--white);
   text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  margin-left: 14px;
 }
 
 input::-webkit-inner-spin-button {
@@ -1342,15 +1600,24 @@ input::-webkit-inner-spin-button {
   display: block;
   cursor: pointer;
   user-select: none;
-  margin-left: 52px;
+  margin-left: 16px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
 }
 
+.fat-list .filter-fat-0 {
+  margin-left: 28px;
+}
 
-.fat-item + label::before { /*круги, обводка*/
+.fat-item + label::before {
+  /*круги, обводка*/
   box-sizing: border-box;
-  content: ""; /*! что это*/
+  content: "";
   position: absolute;
-  left: -39px;
+  left: -33px;
   top: -3px;
   width: 22px;
   height: 22px;
@@ -1359,15 +1626,25 @@ input::-webkit-inner-spin-button {
   background-color: transparent;
 }
 
+.fat-item:hover + label::before {
+  /*@@т.к. псевдоэлемент и псевдокласс не работают вместе""*/
+  border: 3px solid var(--white);
+}
+
 .fat-item:checked + label::after {
   content: "";
   position: absolute;
   top: 4px;
-  left: -32px;
+  left: -26px;
   width: 7.92px;
   height: 7.92px;
   border-radius: 50%;
   background-color: var(--white-transparent);
+}
+
+.fat-item:checked:hover + label::after {
+    /*@@т.к. псевдоэлемент и псевдокласс не работают вместе""*/
+  background-color: var(--white);
 }
 
 #filter-fat-0 {
@@ -1379,7 +1656,6 @@ input::-webkit-inner-spin-button {
 .filter-fillers-wrp ul {
   margin: 0;
   padding: 0;
-  margin-bottom: 40px;
   display: flex;
   list-style: none;
   justify-content: space-around;
@@ -1390,27 +1666,70 @@ input::-webkit-inner-spin-button {
   border-radius: 20px;
 }
 
+.filler-list li:nth-child(1) {
+  margin-left: 20px;
+}
+
+.filler-list li:nth-child(2) {
+  margin-left: -4px;
+}
+
+.filler-list li:nth-child(3) {
+  margin-left: 1px;
+}
+
+.filler-list li:nth-child(4) {
+  /*margin-left: 56px;*/
+}
+
+.filler-list li:nth-child(5) {
+  margin-right: -8px;
+}
+
+.filler-item:checked + label::after {
+  content: url(../img/checkbox-on.svg);
+  position: absolute;
+  top: 2px;
+  left: -32px;
+  background-color: var(--basic-green),rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.filler-item:checked + label::after svg path {
+  fill: var(--white-transparent###);
+}
+
 .filter-fillers-wrp {
   margin-top: 14px;
   position: relative;
+  margin-bottom: 3px;
 }
 
 .filler-list label {
   position: relative;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
 }
 
-.filler-item + label::before {
+.filler-item:not(:checked) + label::before {
   box-sizing: border-box;
-  content: ""; 
+  content: "";
   position: absolute;
-  left: -28px;
-  top: -2px;
-  width: 20px;
+  left: -32px;
+  top: 2px;
+  width: 21px;
   height: 20px;
-  border: 2px solid var(--white-transparent);
-  border-radius: 20%;
+  border: 1.858px solid var(--white-transparent);
+  border-radius: 14%;
   background-color: transparent;
+  cursor: pointer;
+}
 
+.filler-item:not(:checked):hover + label::before {
+  border: 1.858px solid var(--white);
 }
 
 .form-filter > button {
@@ -1425,6 +1744,7 @@ input::-webkit-inner-spin-button {
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
+  cursor: pointer;
 }
 
 .form-filter > button:hover {
@@ -1444,8 +1764,8 @@ input::-webkit-inner-spin-button {
 
 .feedback-form {
   z-index: 10;
-  top: 309px;
-  left: 409px;
+  top: 337px;
+  left: 445px;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -1457,6 +1777,7 @@ input::-webkit-inner-spin-button {
 }
 
 .feedback-form h2 {
+  position: relative;
   width: 349px;
   height: 17px;
   font-weight: 500;
@@ -1464,7 +1785,19 @@ input::-webkit-inner-spin-button {
   line-height: 28px;
   padding-left: 24px;
   color: var(--asphalt);
+  margin-top: 16px;
+  margin-bottom: 31px;
 }
+
+.feedback-form .button-close {
+  position: absolute;
+  top: 12px;
+  right: 7px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
 
 .feedback-form [method="post"] {
   display: flex;
@@ -1481,6 +1814,15 @@ input::-webkit-inner-spin-button {
   box-sizing: border-box;
   border-radius: 4px;
   margin-bottom: 20px;
+  padding-left: 14px;
+}
+
+.feedback-form input[type="text"]:focus-within {
+  border: 2px solid rgba(46, 136, 228, 0.52);
+}
+
+.feedback-form input[type="text"]:hover {
+  border: 2px solid rgba(178, 178, 178, 0.52);
 }
 
 .feedback-form textarea {
@@ -1491,7 +1833,17 @@ input::-webkit-inner-spin-button {
   box-sizing: border-box;
   border-radius: 4px;
   margin-bottom: 25px;
+  padding-left: 14px;
 }
+
+.feedback-form textarea:focus-within {
+  border: 2px solid rgba(46, 136, 228, 0.52);
+}
+
+.feedback-form textarea:hover {
+  border: 2px solid rgba(178, 178, 178, 0.52);
+}
+
 
 .feedback-form button[type="submit"] {
   border: none;
@@ -1508,7 +1860,12 @@ input::-webkit-inner-spin-button {
 }
 
 /*!изменение класса по hover для catalog submenu*/
-.site-menu-catalog:hover .catalog-submenu {
+.site-menu-catalog:hover + .catalog-submenu {
+  display: flex;
+}
+
+/*!изменение класса по hover для showcase*/
+.site-menu-catalog:hover + .catalog-submenu {
   display: flex;
 }
 
@@ -1517,13 +1874,13 @@ input::-webkit-inner-spin-button {
 }
 
 .visually-show-inlblock {
-display: inline-block;
+  display: inline-block;
 }
 
 .modal-wrapper {
   position: fixed;
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.00);
+  background-color: rgba(0, 0, 0, 0);
   width: 100%;
   height: 100%;
 }
