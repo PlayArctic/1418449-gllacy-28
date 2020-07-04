@@ -90,3 +90,23 @@ if (modaldarkwrapper) {
               modaldarkwrapper.classList.remove("visually-show");
        });
 }
+
+
+document.addEventListener('keydown', function (evt) {
+       if (evt.keyCode === 27) {
+              if (modaldarkwrapper) {
+                     modaldarkwrapper.classList.remove("visually-show")
+              };
+              loginpopup.classList.remove("visually-show");
+              searchpopup.classList.remove("visually-show");
+              if (modalwrapper) {
+                     modalwrapper.classList.remove("visually-show");
+              };
+              if (feedbackpopup) {
+                     feedbackpopup.classList.remove("visually-show");
+              };
+              if (cartpopup) {
+                     cartpopup.classList.remove("visually-show-inlblock");
+              };
+       };
+});

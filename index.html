@@ -22,121 +22,86 @@
           <a class="site-menu-catalog site-menu-inactive catalog" href="catalog.html">Каталог
             <div class="pad-submenu"></div>
           </a>
-          
+
           <ul class="visually-hidden catalog-submenu">
-            <li>
+            <li class="submenu-inactive">
               <a href="new_offer.html">Новинки</a>
               <img class="separator" src="img/catalog-line.png">
             </li>
-            <li class="" ><a href="catalog.html">Сливочное</a></li>
-            <li><a href="sherbet.html">Щербеты</a></li>
-            <li><a href="frukt_led.html">Фруктовый лед</a></li>
-            <li><a href="melorin.html">Мелорин</a></li>
+            <li class="submenu-inactive"><a href="catalog.html">Сливочное</a></li>
+            <li class="submenu-inactive"><a href="sherbet.html">Щербеты</a></li>
+            <li class="submenu-inactive"><a href="frukt_led.html">Фруктовый лед</a></li>
+            <li class="submenu-inactive"><a href="melorin.html">Мелорин</a></li>
           </ul>
           <a class="site-menu-inactive" href="delivery_pay.html">Доставка и оплата</a>
           <a class="site-menu-inactive" href="about_us.html">О компании</a>
         </nav>
 
         <div class="user-navigation">
-          <a class="button-hover search" href="#" aria-label="Поиск">
-            <svg class="svg-menu" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M16 14.665l-4.921-4.932a6.144 6.144 0 00-.994-8.273 6.113 6.113 0 00-8.307.352 6.141 6.141 0 00-.293 8.328 6.11 6.11 0 008.262.937L14.659 16 16 14.665zm-9.918-4.288a4.245 4.245 0 01-3.928-2.63 4.269 4.269 0 01.922-4.643 4.248 4.248 0 014.632-.923 4.253 4.253 0 012.624 3.936 4.274 4.274 0 01-1.247 3.01 4.256 4.256 0 01-3.003 1.25z"
-                fill="#fff" /></svg>
-          </a>
-          <section class="visually-hidden search-field">
-            <h2 class="visually-hidden">Форма поиска</h2>
-            <form action="https://echo.htmlacademy.ru/courses" method="get">
-              <input type="search" placeholder="Крем-брюле" name="search_field" id="search_field">
-              <label for="search_field" class="visually-hidden">Поле поиска</label>
-            </form>
-          </section>
+          <div class="search-pad">
+            <a class="button-hover search" href="#" aria-label="Поиск">
+              <svg class="svg-menu" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M16 14.665l-4.921-4.932a6.144 6.144 0 00-.994-8.273 6.113 6.113 0 00-8.307.352 6.141 6.141 0 00-.293 8.328 6.11 6.11 0 008.262.937L14.659 16 16 14.665zm-9.918-4.288a4.245 4.245 0 01-3.928-2.63 4.269 4.269 0 01.922-4.643 4.248 4.248 0 014.632-.923 4.253 4.253 0 012.624 3.936 4.274 4.274 0 01-1.247 3.01 4.256 4.256 0 01-3.003 1.25z"
+                  fill="#fff" /></svg>
+            </a>
+            <section class="visually-hidden search-field">
+              <h2 class="visually-hidden">Форма поиска</h2>
+              <form action="https://echo.htmlacademy.ru/courses" method="get">
+                <input type="search" placeholder="Крем-брюле" name="search_field" id="search_field">
+                <label for="search_field" class="visually-hidden">Поле поиска</label>
+              </form>
+            </section>
+          </div>
 
-          <a class="button-hover login" href="#" aria-label="Личный кабинет">
-            <svg class="svg-menu" width="20" height="19" viewBox="0 0 20 19" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M6.04 14.88L12.96 9.5L6.04 4.13V7.04H0V11.96H6.04V14.88Z" fill="white" />
-              <path
-                d="M18 0H5C4.46957 0 3.96086 0.210714 3.58579 0.585786C3.21071 0.960859 3 1.46957 3 2V4H5V2H18V17H5V15H3V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19H18C18.5304 19 19.0391 18.7893 19.4142 18.4142C19.7893 18.0391 20 17.5304 20 17V2C20 1.46957 19.7893 0.960859 19.4142 0.585786C19.0391 0.210714 18.5304 0 18 0Z"
-                fill="white" />
-            </svg>
-            <span class="menu-text-login">Вход</span>
-          </a>
-          <section class="visually-hidden login-form">
-            <h2 class="visually-hidden">Форма авторизации</h2>
-            <form action="https://echo.htmlacademy.ru/courses" method="post">
-              <input type="email" placeholder="email@example.com" name="authoriz_email" id="authoriz_email"
-                class="authoriz_email">
-              <label for="authoriz_email" class="visually-hidden">Авторизация. Введите email</label>
-              <input type="password" placeholder="......" name="authoriz_pswrd" id="authoriz_pswrd"
-                class="authoriz_pswrd">
-              <label for="authoriz_pswrd" class="visually-hidden">Авторизация. Введите пароль</label>
-            </form>
-            <div class="registration">
-              <button class="button" type="submit" aria-label="авторизоваться">Войти</button>
-              <div class="regbuttons">
-                <a href="#" aria-label="Забыли пароль?">Забыли пароль?</a>
-                <a href="#" aria-label="Зарегистрироваться">Новая регистрация</a>
+          <div class="login-pad">
+            <a class="button-hover login" href="#" aria-label="Личный кабинет">
+              <svg class="svg-menu" width="20" height="19" viewBox="0 0 20 19" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.04 14.88L12.96 9.5L6.04 4.13V7.04H0V11.96H6.04V14.88Z" fill="white" />
+                <path
+                  d="M18 0H5C4.46957 0 3.96086 0.210714 3.58579 0.585786C3.21071 0.960859 3 1.46957 3 2V4H5V2H18V17H5V15H3V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19H18C18.5304 19 19.0391 18.7893 19.4142 18.4142C19.7893 18.0391 20 17.5304 20 17V2C20 1.46957 19.7893 0.960859 19.4142 0.585786C19.0391 0.210714 18.5304 0 18 0Z"
+                  fill="white" />
+              </svg>
+              <span class="menu-text-login">Вход</span>
+            </a>
+            <section class="visually-hidden login-form">
+              <h2 class="visually-hidden">Форма авторизации</h2>
+              <form action="https://echo.htmlacademy.ru/courses" method="post">
+                <input type="email" placeholder="email@example.com" name="authoriz_email" id="authoriz_email"
+                  class="authoriz_email">
+                <label for="authoriz_email" class="visually-hidden">Авторизация. Введите email</label>
+                <input type="password" placeholder="......" name="authoriz_pswrd" id="authoriz_pswrd"
+                  class="authoriz_pswrd">
+                <label for="authoriz_pswrd" class="visually-hidden">Авторизация. Введите пароль</label>
+              </form>
+              <div class="registration">
+                <button class="button" type="submit" aria-label="авторизоваться">Войти</button>
+                <div class="regbuttons">
+                  <a href="#" aria-label="Забыли пароль?">Забыли пароль?</a>
+                  <a href="#" aria-label="Зарегистрироваться">Новая регистрация</a>
+                </div>
               </div>
-            </div>
+          </div>
           </section>
 
-          <a class="button-hover cart" href="#" aria-label="Корзина">
-            <svg class="svg-menu" width="21" height="20" viewBox="0 0 21 20" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M5.70345 2L5.46161 0H0V2H3.66795L5.17946 15H19.2869L21 2H5.70345ZM17.5034 13H6.97313L5.96545 4H18.6924L17.5034 13Z"
-                fill="white" />
-              <path
-                d="M7.03359 20C8.14664 20 9.04894 19.1046 9.04894 18C9.04894 16.8954 8.14664 16 7.03359 16C5.92054 16 5.01823 16.8954 5.01823 18C5.01823 19.1046 5.92054 20 7.03359 20Z"
-                fill="white" />
-              <path
-                d="M16.1027 20C17.2157 20 18.118 19.1046 18.118 18C18.118 16.8954 17.2157 16 16.1027 16C14.9896 16 14.0873 16.8954 14.0873 18C14.0873 19.1046 14.9896 20 16.1027 20Z"
-                fill="white" />
-            </svg>
-            <span class="menu-text-cart">Пусто</span>
-          </a>
-          <!--<section class="cart-field visually-hidden">
-            <h2 class="visually-hidden">Корзина</h2>
-            <table>
-              <tr>
-                <td>
-                  <button class="cart-cross"><img src="img/cross-big.svg" alt="убрать из корзины"></button>
-                </td>
-                <td><img class="cart-img" src="img/ice_with_orange.png"
-                    alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></td>
-                <td>
-                  <p>Пломбир с апельсиновым джемом</p>
-                </td>
-                <td>
-                  <p><span class="mult-price">1,5кг х </span><span class="transp-price">200 руб.</span></p>
-                </td>
-                <td aria-label="сумма по первому мороженному">
-                  <p>300 руб.</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <button class="cart-cross"><img src="img/cross-big.svg" alt="убрать из корзины"></button>
-                </td>
-                <td><img class="cart-img" src="img/ice_strawberry.png"
-                    alt="Сливочно-клубничное с присыпкой из белого шоколада"></td>
-                <td>
-                  <p>Клубничный пломбир с присыпкой из белого шоколада</p>
-                </td>
-                <td>
-                  <p><span class="mult-price">1,5кг х </span><span class="transp-price">300 руб.</span></p>
-                </td>
-                <td aria-label="сумма по первому мороженному">
-                  <p>450 руб.</p>
-                </td>
-              </tr>
-            </table>
-            <hr>
-            <p class="total-amount">Итого: 750 руб.</p>
-            <a class="cart-button button" href="https://ordersubmit.html">Оформить заказ</a>
-          </section> -->
-
+          <div class="cart-pad">
+            <a class="button-hover cart" href="#" aria-label="Корзина">
+              <svg class="svg-menu" width="21" height="20" viewBox="0 0 21 20" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M5.70345 2L5.46161 0H0V2H3.66795L5.17946 15H19.2869L21 2H5.70345ZM17.5034 13H6.97313L5.96545 4H18.6924L17.5034 13Z"
+                  fill="white" />
+                <path
+                  d="M7.03359 20C8.14664 20 9.04894 19.1046 9.04894 18C9.04894 16.8954 8.14664 16 7.03359 16C5.92054 16 5.01823 16.8954 5.01823 18C5.01823 19.1046 5.92054 20 7.03359 20Z"
+                  fill="white" />
+                <path
+                  d="M16.1027 20C17.2157 20 18.118 19.1046 18.118 18C18.118 16.8954 17.2157 16 16.1027 16C14.9896 16 14.0873 16.8954 14.0873 18C14.0873 19.1046 14.9896 20 16.1027 20Z"
+                  fill="white" />
+              </svg>
+              <span class="menu-text-cart">Пусто</span>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -249,7 +214,8 @@
 
       <div class="advantages-wrapper container">
         <section class="advantages">
-          <h2>Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
+          <h2>Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес
+          </h2>
           <div class="advantages-items">
             <p>Все наше мороженое изготавливается на собственном производстве, с
               использованием современного оборудования<br>
@@ -296,7 +262,9 @@
       </div>
 
       <section class="feedback-container">
+
         <div class="map-wrapper">
+          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aeec06204b9da86d75b540ef0ae060ceb48740795e5afce9c0f6414f1e9e70c92&amp;width=1200&amp;height=430&amp;lang=ru_RU&amp;scroll=true"></script>
           <div class="feedback">
             <h2 class="visually-hidden">Адрес и форма обратной связи</h2>
             <p>
@@ -330,7 +298,9 @@
         </form>
         <button aria-label="Закрыть форму обратной связи" class="button-close">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17">
-            <path fill="#231F20" d="M17.454 1.46L16.04.046 9 7.086 1.96.046.546 1.46l7.04 7.04-7.04 7.04 1.414 1.414L9 9.914l7.04 7.04 1.414-1.414-7.04-7.04z"/></svg>
+            <path fill="#231F20"
+              d="M17.454 1.46L16.04.046 9 7.086 1.96.046.546 1.46l7.04 7.04-7.04 7.04 1.414 1.414L9 9.914l7.04 7.04 1.414-1.414-7.04-7.04z" />
+          </svg>
         </button>
       </section>
 
@@ -367,7 +337,7 @@
                 </svg>
               </a>
             </li>
-            
+
             <li>
               <a href="https://www.instagram.com/" aria-label="instagram">
                 <svg class="svg-social" width="32" height="32" viewBox="0 0 32 32" fill="none"
