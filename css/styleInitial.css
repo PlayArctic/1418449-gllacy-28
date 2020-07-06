@@ -350,8 +350,7 @@ img {
   top: 6px;
 }
 
-.button-hover:hover .svg-menu path {
-  /*!тройной селектор*/
+.button-hover:hover path {
   fill: var(--asphalt);
 }
 
@@ -968,6 +967,7 @@ img {
   width: 368px;
   height: 44px;
   margin-right: 6px;
+  padding-left:13px;
 }
 
 .subscribtion .input_email:focus-within {
@@ -1772,19 +1772,19 @@ input::-webkit-inner-spin-button {
   background-color: transparent;
 }
 
-.fat-item:hover + label::before {
+.fat-item:hover:enabled + label::before {
   /*т.к. псевдоэлемент и псевдокласс не работают вместе""*/
   border: 3px solid var(--white);
 }
 
-.fat-item:checked:focus + label::before {
+.fat-item:checked:focus:enabled + label::before {
   /*т.к. псевдоэлемент и псевдокласс не работают вместе""*/
   outline: -webkit-focus-ring-color auto 1px;
   border: 3px solid var(--white);
 }
 
 
-.fat-item:checked + label::after {
+.fat-item:checked:enabled + label::after {
   content: "";
   position: absolute;
   top: 4px;
@@ -1795,19 +1795,14 @@ input::-webkit-inner-spin-button {
   background-color: var(--white-transparent);
 }
 
-.fat-item:checked:hover + label::after {
+.fat-item:checked:hover:enabled + label::after {
     /*т.к. псевдоэлемент и псевдокласс не работают вместе""*/
   background-color: var(--white);
 }
 
-.fat-item:focus + label::after {
+.fat-item:focus:enabled + label::after {
     /*т.к. псевдоэлемент и псевдокласс не работают вместе""*/
   background-color: var(--white);
-}
-
-
-#filter-fat-0 {
-  margin-left: 14px;
 }
 
 /*Fillers*/
@@ -1850,18 +1845,18 @@ input::-webkit-inner-spin-button {
 .filler-item:checked + label::after {
   content: url(../img/checkbox-on.svg);
   position: absolute;
-  top: 2px;
+  top: 0px;
   left: -32px;
   background-color: var(--basic-green),var(--white-transparent-popup);
   cursor: pointer;
   opacity: 0.8;
 }
 
-.filler-item:checked:hover + label::after {
+.filler-item:checked:hover:enabled + label::after {
   opacity: 1;
 }
 
-.filler-item:checked + label::after svg path {
+.filler-item:checked:enabled + label::after svg path {
   fill: var(--white-transparent);
 }
 
@@ -1886,7 +1881,7 @@ input::-webkit-inner-spin-button {
   content: "";
   position: absolute;
   left: -32px;
-  top: 2px;
+  top: 0px;
   width: 21px;
   height: 20px;
   border: 1.858px solid var(--white-transparent);
@@ -1895,11 +1890,11 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
 }
 
-.filler-item:not(:checked):hover + label::before {
+.filler-item:not(:checked):hover:enabled + label::before {
   border: 1.858px solid var(--white);
 }
 
-.filler-item:focus + label::after {
+.filler-item:focus:enabled + label::after {
   /*т.к. псевдоэлемент и псевдокласс не работают вместе""*/
   outline: -webkit-focus-ring-color auto 1px; 
   opacity: 1;
