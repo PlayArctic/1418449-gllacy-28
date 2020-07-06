@@ -158,3 +158,10 @@ bullet3.addEventListener('click', function(){
        sliderTitle2.classList.remove('slide-current');
        sliderTitle3.classList.add('slide-current');
 })
+
+
+const fib = [1, 2, 3, 4, 5, 6]
+
+const fibPow = map(fib => fiib**2)
+
+console.log(fibPow)
