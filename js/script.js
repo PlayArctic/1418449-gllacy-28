@@ -1,19 +1,19 @@
-var modalwrapper = document.querySelector(".modal-wrapper");
-var modaldarkwrapper = document.querySelector(".modal-dark-wrapper");
+const modalwrapper = document.querySelector(".modal-wrapper");
+const modaldarkwrapper = document.querySelector(".modal-dark-wrapper");
 
-var login = document.querySelector(".login");
-var loginpopup = document.querySelector(".login-form");
+const login = document.querySelector(".login");
+const loginpopup = document.querySelector(".login-form");
 
-var search = document.querySelector(".search");
-var searchpopup = document.querySelector(".search-field");
+const search = document.querySelector(".search");
+const searchpopup = document.querySelector(".search-field");
 
-var feedback = document.querySelector(".feedback-btn");
-var feedbackpopup = document.querySelector(".feedback-form");
-var buttonclose = document.querySelector(".button-close");
+const feedback = document.querySelector(".feedback-btn");
+const feedbackpopup = document.querySelector(".feedback-form");
+const buttonclose = document.querySelector(".button-close");
 
-var cart = document.querySelector(".cart");
-var cartfull = document.querySelector(".cart-full");
-var cartpopup = document.querySelector(".cart-field");
+const cart = document.querySelector(".cart");
+const cartfull = document.querySelector(".cart-full");
+const cartpopup = document.querySelector(".cart-field");
 
 
 login.addEventListener("click", function (evt) {
@@ -110,3 +110,51 @@ document.addEventListener('keydown', function (evt) {
               };
        };
 });
+
+
+// Слайдер bullets
+
+const bullet1 = document.querySelector('.slider-controls button:nth-child(1)')
+const bullet2 = document.querySelector('.slider-controls button:nth-child(2)')
+const bullet3 = document.querySelector('.slider-controls button:nth-child(3)')
+const sliderWrapper = document.querySelector('.wrapper')
+const sliderTitle1 = document.querySelector('.slider-list li:nth-child(1)')
+const sliderTitle2 = document.querySelector('.slider-list li:nth-child(2)')
+const sliderTitle3 = document.querySelector('.slider-list li:nth-child(3)')
+console.log(sliderTitle1)
+
+bullet1.addEventListener('click', function(){
+       bullet1.classList.add('current')
+       bullet2.classList.remove('current')
+       bullet3.classList.remove('current')
+       sliderWrapper.classList.add('site-wrapper-1')
+       sliderWrapper.classList.remove('site-wrapper-2')
+       sliderWrapper.classList.remove('site-wrapper-3')
+       sliderTitle1.classList.add('slide-current');
+       sliderTitle2.classList.remove('slide-current');
+       sliderTitle3.classList.remove('slide-current');
+})
+
+bullet2.addEventListener('click', function(){
+       bullet1.classList.remove('current')
+       bullet2.classList.add('current')
+       bullet3.classList.remove('current')
+       sliderWrapper.classList.remove('site-wrapper-1')
+       sliderWrapper.classList.add('site-wrapper-2')
+       sliderWrapper.classList.remove('site-wrapper-3')
+       sliderTitle1.classList.remove('slide-current');
+       sliderTitle2.classList.add('slide-current');
+       sliderTitle3.classList.remove('slide-current');
+})
+
+bullet3.addEventListener('click', function(){
+       bullet1.classList.remove('current')
+       bullet2.classList.remove('current')
+       bullet3.classList.add('current')
+       sliderWrapper.classList.remove('site-wrapper-1')
+       sliderWrapper.classList.remove('site-wrapper-2')
+       sliderWrapper.classList.add('site-wrapper-3')
+       sliderTitle1.classList.remove('slide-current');
+       sliderTitle2.classList.remove('slide-current');
+       sliderTitle3.classList.add('slide-current');
+})

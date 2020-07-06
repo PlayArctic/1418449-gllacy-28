@@ -7,12 +7,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=b687fc4d-167d-484e-8102-47ace12f4e1a&lang=ru_RU"
+  type="text/javascript"> 
+  </script> <!--перестает работать при попытке переноса yandex script согласно критерию Д3-->
 </head>
 
 <body class="page-body">
   <div class="modal-wrapper visually-hidden"></div>
   <div class="modal-dark-wrapper visually-hidden"></div>
-  <div class="site-wrapper-1">
+  <div class="wrapper site-wrapper-1">
     <header class="main-header">
       <div class="navigation-wrapper container">
         <nav class="site-navigation">
@@ -25,16 +28,16 @@
 
           <ul class="visually-hidden catalog-submenu">
             <li class="submenu-inactive">
-              <a href="new_offer.html">Новинки</a>
-              <img class="separator" src="img/catalog-line.png">
+              <a href="#">Новинки</a>
+              <img class="separator" src="img/catalog-line.png" alt="">
             </li>
             <li class="submenu-inactive"><a href="catalog.html">Сливочное</a></li>
-            <li class="submenu-inactive"><a href="sherbet.html">Щербеты</a></li>
-            <li class="submenu-inactive"><a href="frukt_led.html">Фруктовый лед</a></li>
-            <li class="submenu-inactive"><a href="melorin.html">Мелорин</a></li>
+            <li class="submenu-inactive"><a href="#">Щербеты</a></li>
+            <li class="submenu-inactive"><a href="#">Фруктовый лед</a></li>
+            <li class="submenu-inactive"><a href="#">Мелорин</a></li>
           </ul>
-          <a class="site-menu-inactive" href="delivery_pay.html">Доставка и оплата</a>
-          <a class="site-menu-inactive" href="about_us.html">О компании</a>
+          <a class="site-menu-inactive" href="#">Доставка и оплата</a>
+          <a class="site-menu-inactive" href="#">О компании</a>
         </nav>
 
         <div class="user-navigation">
@@ -82,9 +85,8 @@
                   <a href="#" aria-label="Зарегистрироваться">Новая регистрация</a>
                 </div>
               </div>
+            </section>
           </div>
-          </section>
-
           <div class="cart-pad">
             <a class="button-hover cart" href="#" aria-label="Корзина">
               <svg class="svg-menu" width="21" height="20" viewBox="0 0 21 20" fill="none"
@@ -110,7 +112,7 @@
           <h2 class="visually-hidden">Время работы</h2>
           <p>
             с 10 до 20, ежедневно<br>
-            <span class="work-time-bold">8 812 450-25-25</span>
+            <span class="work-time-bold"><a href="tel:+78124502525" class="tel">8 812 450-25-25</a></span>
           </p>
         </div>
       </section>
@@ -119,15 +121,15 @@
         <ul class="slider-list">
           <li class="slider-item slide slide-current">
             <h3 class="slide-title">Крем-брюле и пломбир с малиновым джемом</h3>
-            <a href="sale_prop1.html" class="button slide-button">Давайте оба!</a>
+            <a href="#" class="button slide-button">Давайте оба!</a>
           </li>
           <li class="slider-item slide">
             <h3 class="slide-title">Шоколадный пломбир и лимонный сорбет</h3>
-            <a href="sale_prop1.html" class="button slide-button">Давайте оба!</a>
+            <a href="#" class="button slide-button">Давайте оба!</a>
           </li>
           <li class="slider-item slide">
             <h3 class="slide-title">Пломбир с помадкой и клубничный щербет</h3>
-            <a href="sale_prop1.html" class="button slide-button">Давайте оба!</a>
+            <a href="#" class="button slide-button">Давайте оба!</a>
           </li>
         </ul>
         <div class="bullet"></div>
@@ -263,8 +265,7 @@
 
       <section class="feedback-container">
 
-        <div class="map-wrapper">
-          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aeec06204b9da86d75b540ef0ae060ceb48740795e5afce9c0f6414f1e9e70c92&amp;width=1200&amp;height=430&amp;lang=ru_RU&amp;scroll=true"></script>
+        <div id="map" class="map-wrapper">
           <div class="feedback">
             <h2 class="visually-hidden">Адрес и форма обратной связи</h2>
             <p>
@@ -275,7 +276,7 @@
             </p>
             <p>
               Для заказов по телефону:<br>
-              <span class="subscr-bold">8 812 450-25-25</span><br>
+              <span class="subscr-bold"><a href="tel:+78124502525" class="tel">8 812 450-25-25</a></span><br>
               (с 10 до 20 ежедневно)
             </p>
             <a class="button feedback-btn" href="feedback.html">Форма обратной связи</a>
@@ -401,8 +402,10 @@
 
 
     </footer>
-    <script src="js/script.js"></script>
+
   </div>
+    <script src="js/script.js"></script>
+    <script src="js/yandexmap.js"></script>
 
 </body>
 
