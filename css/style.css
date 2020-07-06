@@ -687,6 +687,18 @@ img {
   background-color: var(--white);
 }
 
+.slider-controls .bullet1:not(.current):hover {
+  background-color: var(--white-transparent-popup);
+}
+
+.slider-controls .bullet2:not(.current):hover {
+  background-color: var(--white-transparent-popup);
+}
+
+.slider-controls .bullet3:not(.current):hover {
+  background-color: var(--white-transparent-popup);
+}
+
 .slide {
   display: none;
 }
