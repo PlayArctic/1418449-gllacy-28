@@ -209,6 +209,7 @@ img {
 /*!n*/
 .site-menu-inactive {
   display: inline-block;
+  vertical-align: baseline;
   padding-top: 6px;
   padding-bottom: 7px;
   padding-left: 13px;
@@ -643,6 +644,7 @@ img {
   width: 560px;
   height: 229px;
   background-image: url(../img/raspberry_back.jpg);
+  background-color: var(--white-transparent-popup);
   background-size: 100%;
   border-radius: 16px;
 
@@ -653,6 +655,7 @@ img {
   width: 560px;
   height: 229px;
   background-image: url(../img/choko_back.jpg);
+  background-color: var(--white-transparent-popup);
   background-size: 100%;
   border-radius: 16px;
 
@@ -811,6 +814,7 @@ img {
 .advantages-wrapper {
   color: var(--asphalt);
   background-image: url(../img/vaffle_pattern2.jpg); /* ".." выходим из папки css на уровень вверх, и заходим в папку img */
+  background-color: var(--white-transparent-popup);
   background-repeat: repeat;
   width: 1146px;
   height: 306px;
@@ -881,6 +885,7 @@ img {
 
 .blog-new-wrapper {
   background-image: url(../img/strawberry_back.jpg);
+  background-color: var(--white-transparent-popup);
   background-image: 100%;
   width: 560px;
   height: 220px;
@@ -921,6 +926,7 @@ img {
 .subscr-wrapper {
   display: flex;
   background-image: url(../img/post_back.png);
+  background-color: var(--white-transparent-popup);
   width: 560px;
   height: 220px;
 }
@@ -2019,6 +2025,7 @@ input::-webkit-inner-spin-button {
 
 .visually-show-inlblock {
   display: inline-block;
+  vertical-align: auto;
 }
 
 .modal-wrapper {
