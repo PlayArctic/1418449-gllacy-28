@@ -271,16 +271,17 @@ img {
   position: relative;
 }
 
+
+.catalog-pad:focus-within .catalog-submenu {
+  display: flex;
+}
+
 .catalog-pad:hover .site-menu-catalog.site-menu-inactive {
   /*для активного hover при переходе на submenu*/
   color: var(--asphalt);
   background-color: var(--white);
 }
 
-.catalog-pad:hover .catalog-submenu {
-  /*для активного hover при переходе на submenu*/
-  display: flex;
-}
 
 .site-menu-inactive[href]:hover {
   color: var(--asphalt);
@@ -452,6 +453,10 @@ img {
   display: flex;
 }
 
+.search-pad:focus-within .search-field {
+  display: flex;
+}
+
 .search-pad:hover .button-hover,
 .search-pad:hover path {
   /*при работе с сабменю, ховер остается*/
@@ -497,6 +502,10 @@ img {
 }
 
 .login-pad:hover .login-form {
+  display: flex;
+}
+
+.login-pad:focus-within .login-form {
   display: flex;
 }
 
@@ -572,6 +581,11 @@ img {
 .card-pad-full:hover .cart-field {
   display: inline-block;
   vertical-align: baseline;
+}
+
+.cart-pad:focus-within .cart-field,
+.cart-pad-full:focus-within .cart-field {
+  display: inline-block;
 }
 
 .work-time {
@@ -836,9 +850,28 @@ img {
   color: var(--white);
 }
 
-.titl:focus .showcase-button {
+.showcase-item:focus-within  .showcase-button {
   display: flex;
 }
+
+
+.showcase-item:focus-within::after { /*отображение подложки при фокусе*/
+  content: "";
+  z-index: 9;
+  display: flex;
+  justify-content: flex-start;
+  background-color: var(--white-transparent-popup);
+  box-shadow: 0px 20px 20px var(--showcase-shadow);
+  border-radius: 4px;
+  position: absolute;
+  top: 2px;
+  width: 267px;
+  padding-right: 12px;
+  padding-left: 12px;
+  left: -12px;
+  height: calc(103% + 55px);
+}
+
 
 .showcase-item:hover::after {
   content: "";
@@ -857,25 +890,7 @@ img {
   height: calc(103% + 55px);
 }
 
-.showcase-item a:focus::after {
-  content: "";
-  z-index: 9;
-  display: flex;
-  justify-content: flex-start;
-  background-color: var(--white-transparent-popup);
-  box-shadow: 0px 20px 20px var(--showcase-shadow);
-  border-radius: 4px;
-  position: absolute;
-  top: 2px;
-  width: 267px;
-  padding-right: 12px;
-  padding-left: 12px;
-  left: -12px;
-  height: calc(103% + 55px);
-}
-
-
-.showcase-item img:focus .showcase-button { /*!не понятно @@@*/
+.showcase-item:focus-within .showcase-button { /*отображение кнопки при фокусе*/
   display: flex;
   z-index: 11;
   position: absolute;
@@ -1961,10 +1976,12 @@ input[type=number] {
   margin-top: 4px;
 }
 
-.fat-item {
+.fat-item {  /*доступно прячем. обрезаем эл-нт до 0*/
   position: absolute;
-  visibility: hidden;
-  opacity: 0;
+  clip:rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 .fat-item + label::before {
@@ -2063,10 +2080,12 @@ input[type=number] {
 }
 
 
-.filler-item {
-  opacity: 0;
+.filler-item {  /*доступно прячем. обрезаем эл-нт до 0*/
   position: absolute;
-  visibility: hidden;
+  clip:rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 .filler-item:checked + label::after {
