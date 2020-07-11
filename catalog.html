@@ -23,7 +23,6 @@
             <ul class='visually-hidden catalog-submenu'>
               <li class='submenu-inactive'>
                 <a href='#'>Новинки</a>
-                <img class='separator' src='img/catalog-line.png' alt='' width='128' height='1px'>
               </li>
               <li class='submenu-inactive'><a href='catalog.html'>Сливочное</a></li>
               <li class='submenu-inactive'><a href='#'>Щербеты</a></li>
@@ -68,10 +67,10 @@
               <h2 class='visually-hidden'>Форма авторизации</h2>
               <form action='https://echo.htmlacademy.ru/courses' method='post'>
                 <input type='email' placeholder='email@example.com' name='authoriz-email' id='authoriz-email'
-                  class='authoriz-email'>
+                  class='authoriz-email' required>
                 <label for='authoriz-email' class='visually-hidden'>Авторизация. Введите email</label>
                 <input type='password' placeholder='······' name='authoriz-pswrd' id='authoriz-pswrd'
-                  class='authoriz-pswrd'>
+                  class='authoriz-pswrd' required>
                 <label for='authoriz-pswrd' class='visually-hidden'>Авторизация. Введите пароль</label>
                 <button class='button' type='submit'>Войти</button>
               </form>             
@@ -92,7 +91,7 @@
               <table>
                 <tr>
                   <td>
-                    <button class='cart-cross'><img src='img/cross-small.svg' alt='убрать из корзины' width='11' height='11'></button>
+                    <button class='cart-cross' aria-label='убрать из корзины' ><img src='img/cross-small.svg' width='11' height='11'></button>
                   </td>
                   <td><img class='cart-img' src='img/ice_with_orange.png' width='33' height='33'
                       alt='Сливочное с апельсиновым джемом и цитрусовой стружкой'></td>
@@ -108,7 +107,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <button class='cart-cross'><img src='img/cross-small.svg' alt='убрать из корзины' width='11' height='11'></button>
+                    <button class='cart-cross' aria-label='убрать из корзины' ><img src='img/cross-small.svg' width='11' height='11'></button>
                   </td>
                   <td><img class='cart-img' src='img/ice_strawberry.png' width='33' height='33'
                       alt='Сливочно-клубничное с присыпкой из белого шоколада'></td>
@@ -211,17 +210,17 @@
             <li>
               <input class='fat-item' type='radio' name='fat-content' value='<10%'
                 id='filter-fat-under-10%' checked>
-              <label for='filter-fat-under-10%'>до 10%</label>
+              <label for='filter-fat-under-10%' class='filter-fat-10'>до 10%</label>
             </li>
             <li>
               <input class='fat-item' type='radio' name='fat-content' value='<30%'
                 id='filter-fat-under-30%'>
-              <label for='filter-fat-under-30%'>до 30%</label>
+              <label for='filter-fat-under-30%' class='filter-fat-30'>до 30%</label>
             </li>
             <li>
               <input class='fat-item' type='radio' name='fat-content' value='>30%'
                 id='filter-fat-above-30%'>
-              <label for='filter-fat-above-30%'>выше 30%</label>
+              <label for='filter-fat-above-30%' class='filter-fat-30up'>выше 30%</label>
             </li>
           </ul>
         </fieldset>
@@ -267,7 +266,7 @@
                 alt='Сливочное с апельсиновым джемом и цитрусовой стружкой'>
             </a>
             <p>310 ₽<span class='weight'>/кг</span></p>
-            <h2>Сливочное с апельсиновым джемом и цитрусовой стружкой</h2>
+            <h2><a href='#' class='titl'>Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h2>
             <div class='showcase-button button visually-hidden'>
               <a href='#'>Быстрый просмотр</a>
             </div>
@@ -280,7 +279,7 @@
               <img class='showcase-img' src='img/ice_cofee.png' width='267' height='267' alt='Сливочно-кофейное с кусочками шоколада'>
             </a>
             <p>380 ₽<span class='weight'>/кг</span></p>
-            <h2>Сливочно-кофейное с кусочками шоколада</h2>
+            <h2><a href='#' class='titl'>Сливочно-кофейное с кусочками шоколада</a></h2>
             <div class='showcase-button button visually-hidden'>
               <a href='#'>Быстрый просмотр</a>
             </div>
@@ -294,7 +293,7 @@
                 alt='Сливочно-клубничное с присыпкой из белого шоколада'>
             </a>
             <p>355 ₽<span class='weight'>/кг</span></p>
-            <h2>Сливочно-клубничное с присыпкой из белого шоколада</h2>
+            <h2><a href='#' class='titl'>Сливочно-клубничное с присыпкой из белого шоколада</a></h2>
             <div class='showcase-button button visually-hidden'>
               <a href='#'>Быстрый просмотр</a>
             </div>
@@ -307,7 +306,7 @@
               <img class='showcase-img' src='img/ice_brulee.png' width='267' height='267' alt='Сливочное крем-брюле с карамельной подливкой'>
             </a>
             <p>415 ₽<span class='weight'>/кг</span></p>
-            <h2>Сливочное крем-брюле<br>с карамельной подливкой</h2>
+            <h2><a href='#' class='titl'>Сливочное крем-брюле<br>с карамельной подливкой</a></h2>
             <div class='showcase-button button visually-hidden'>
               <a href='#'>Быстрый просмотр</a>
             </div>
@@ -320,7 +319,7 @@
               <img class='showcase-img' src='img/ice_cowberry.png' width='267' height='267' alt='Сливочное с брусничным джемом'>
             </a>
             <p>325 ₽<span class='weight'>/кг</span></p>
-            <h2>Сливочное с брусничным<br>джемом</h2>
+            <h2><a href='#' class='titl'>Сливочное с брусничным<br>джемом</a></h2>
             <div class='showcase-button button visually-hidden'>
               <a href='#'>Быстрый просмотр</a>
             </div>
@@ -333,7 +332,7 @@
               <img class='showcase-img' src='img/ice_blueberry.png' width='267' height='267' alt='Сливочно-черничное с цельными ягодами черники'>
             </a>
             <p>410 ₽<span class='weight'>/кг</span></p>
-            <h2>Сливочно-черничное с цельными ягодами черники</h2>
+            <h2><a href='#' class='titl'>Сливочно-черничное с цельными ягодами черники</a></h2>
             <div class='showcase-button button visually-hidden'>
               <a href='#'>Быстрый просмотр</a>
             </div>
@@ -346,7 +345,7 @@
               <img class='showcase-img' src='img/ice_lemon.png' width='267' height='267' alt='Сливочно-лимонное с карамельной присыпкой'>
             </a>
             <p>315 ₽<span class='weight'>/кг</span></p>
-            <h2>Сливочно-лимонное с карамельной присыпкой</h2>
+            <h2><a href='#' class='titl'>Сливочно-лимонное с карамельной присыпкой</a></h2>
             <div class='showcase-button button visually-hidden'>
               <a href='#'>Быстрый просмотр</a>
             </div>
@@ -359,7 +358,7 @@
               <img class='showcase-img' src='img/ice_choko.png' width='267' height='267' alt='Сливочное с шоколадной стружкой'>
             </a>
             <p>320 ₽<span class='weight'>/кг</span></p>
-            <h2>Сливочное с шоколадной стружкой</h2>
+            <h2><a href='#' class='titl'>Сливочное с шоколадной стружкой</a></h2>
             <div class='showcase-button button visually-hidden'>
               <a href='#'>Быстрый просмотр</a>
             </div>
@@ -372,7 +371,7 @@
               <img class='showcase-img' src='img/ice_vanilla.png' width='267' height='267' alt='Сливочно-ванильное с кусочками шоколада'>
             </a>
             <p>440 ₽<span class='weight'>/кг</span></p>
-            <h2>Сливочно-ванильное<br>с кусочками шоколада</h2>
+            <h2><a href='#' class='titl'>Сливочно-ванильное<br>с кусочками шоколада</a></h2>
             <div class='showcase-button button visually-hidden'>
               <a href='#'>Быстрый просмотр</a>
             </div>
@@ -385,7 +384,7 @@
               <img class='showcase-img' src='img/ice_menthol.png' width='267' height='267' alt='Сливочноe с ментоловым сиропом'>
             </a>
             <p>435 ₽<span class='weight'>/кг</span></p>
-            <h2>Сливочноe с ментоловым<br>сиропом</h2>
+            <h2><a href='#' class='titl'>Сливочноe с ментоловым<br>сиропом</a></h2>
             <div class='showcase-button button visually-hidden'>
               <a href='#'>Быстрый просмотр</a>
             </div>
@@ -398,7 +397,7 @@
               <img class='showcase-img' src='img/ice_dark_choko.png' width='267' height='267' alt='Сливочное с кусочками черного шоколада'>
             </a>
             <p>355 ₽<span class='weight'>/кг</span></p>
-            <h2>Сливочное с кусочками черного шоколада</h2>
+            <h2><a href='#' class='titl'>Сливочное с кусочками черного шоколада</a></h2>
             <div class='showcase-button button visually-hidden'>
               <a href='#'>Быстрый просмотр</a>
             </div>
@@ -411,7 +410,7 @@
               <img class='showcase-img' src='img/ice_mint.png' width='267' height='267' alt='Сливочное с мятным сиропом'>
             </a>
             <p>420 ₽<span class='weight'>/кг</span></p>
-            <h2>Сливочное с мятным сиропом</h2>
+            <h2><a href='#' class='titl'>Сливочное с мятным сиропом</a></h2>
             <div class='showcase-button button visually-hidden'>
               <a href='#'>Быстрый просмотр</a>
             </div>
@@ -435,7 +434,7 @@
         <li class='page-item page-inactive'>
           <a href='#'>5</a>
         </li>
-        <li class='page-item page-inactive'>
+        <li class='page-item page-arrow'>
           <a href='#'><img src='img/array-right-small.svg' width='7' height='12'></a>
         </li>
       </ul>

@@ -28,7 +28,6 @@
             <ul class='visually-hidden catalog-submenu'>
               <li class='submenu-inactive'>
                 <a href='#'>Новинки</a>
-                <img class='separator' src='img/catalog-line.png' alt='' width='128' height='1px'>
               </li>
               <li class='submenu-inactive'><a href='catalog.html'>Сливочное</a></li>
               <li class='submenu-inactive'><a href='#'>Щербеты</a></li>
@@ -72,12 +71,12 @@
             <section class='visually-hidden login-form'>
               <h2 class='visually-hidden'>Форма авторизации</h2>
               <form action='https://echo.htmlacademy.ru/courses' method='post'>
-                <input type='email' placeholder='email@example.com' name='authoriz_email' id='authoriz_email'
-                  class='authoriz_email'>
-                <label for='authoriz_email' class='visually-hidden'>Авторизация. Введите email</label>
-                <input type='password' placeholder='······' name='authoriz_pswrd' id='authoriz_pswrd'
-                  class='authoriz_pswrd'>
-                <label for='authoriz_pswrd' class='visually-hidden'>Авторизация. Введите пароль</label>
+                <input type='email' placeholder='email@example.com' name='authoriz-email' id='authoriz-email'
+                  class='authoriz-email' required>
+                <label for='authoriz-email' class='visually-hidden'>Авторизация. Введите email</label>
+                <input type='password' placeholder='······' name='authoriz-pswrd' id='authoriz-pswrd'
+                  class='authoriz-pswrd' required>
+                <label for='authoriz-pswrd' class='visually-hidden'>Авторизация. Введите пароль</label>
                 <button class='button' type='submit'>Войти</button>
               </form>
               <div class='regbuttons'>
@@ -115,7 +114,7 @@
       </section>
 
       <section class='slider container'>
-        <h2 class='visually-hidden'>Текущие популярные предложения</h2>
+        <h2 class='visually-hidden'>Слайдер, текущие популярные предложения</h2>
         <ul class='slider-list'>
           <li class='slider-item slide slide-current'>
             <h3 class='slide-title'>Крем-брюле и пломбир с малиновым джемом</h3>
@@ -147,7 +146,7 @@
         <section class='features-raspb'>
           <h2>Малинка даром!</h2>
           <p>При покупке 2 кг любого фруктового мороженого, добавим<br>
-            в ваш заказ банку маринового варенья бесплатно.</p>
+            в ваш заказ банку малинового варенья бесплатно.</p>
           <a class='button strawb' href='#'>Хочу варенье!</a>
         </section>
 
@@ -168,19 +167,19 @@
                 alt='Сливочное с апельсиновым джемом и цитрусовой стружкой'>
             </a>
             <p>310 ₽<span class='weight'>/кг</span></p>
-            <h2>Сливочное с апельсиновым джемом и цитрусовой стружкой</h2>
+            <h2><a href='#' class='titl'>Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h2>
             <a class='showcase-button button visually-hidden' href='#'>Быстрый просмотр</a>
           </article>
         </li>
 
         <li>
-          <article class='showcase-item'>
+          <article class='showcase-item' tabindex="1">
             <a href='#'>
               <img class='showcase-img' src='img/ice_cofee.png' width='267' height='267'
                 alt='Сливочно-кофейное с кусочками шоколада'>
             </a>
             <p>380 ₽<span class='weight'>/кг</span></p>
-            <h2>Сливочно-кофейное с кусочками шоколада</h2>
+            <h2><a href='#' class='titl'>Сливочно-кофейное с кусочками шоколада</a></h2>
             <a class='showcase-button button visually-hidden' href='#'>Быстрый просмотр</a>
           </article>
         </li>
@@ -192,8 +191,7 @@
                 alt='Сливочно-клубничное с присыпкой из белого шоколада'>
             </a>
             <p>355 ₽<span class='weight'>/кг</span></p>
-            <h2>Сливочно-клубничное<br>
-              с присыпкой из белого шоколада</h2>
+            <h2><a href='#' class='titl'>Сливочно-клубничное<br>с присыпкой из белого шоколада</a></h2>
             <a class='showcase-button button visually-hidden' href='#'>Быстрый просмотр</a>
           </article>
         </li>
@@ -205,8 +203,7 @@
                 alt='Сливочное крем-брюле с карамельной подливкой'>
             </a>
             <p>415 ₽<span class='weight'>/кг</span></p>
-            <h2>Сливочное крем-брюле<br>
-              с карамельной подливкой</h2>
+            <h2><a href='#' class='titl'>Сливочное крем-брюле<br>с карамельной подливкой</a></h2>
             <a class='showcase-button button visually-hidden' href='#'>Быстрый просмотр</a>
           </article>
         </li>
@@ -285,24 +282,7 @@
 
 
 
-      <section class='visually-hidden feedback-form'>
-        <h2>Мы обязательно вам ответим!</h2>
-        <form action='https://echo.htmlacademy.ru/courses' method='post'>
-          <input type='text' placeholder='Как вас зовут?' name='customer-name' id='customer_name'>
-          <label for='customer_name' class='visually-hidden'>Как вас зовут?</label>
-          <input type='text' placeholder='Ваша почта для ответа?' name='customer-email' id='customer_email'>
-          <label for='customer_email' class='visually-hidden'>Ваша почта для ответа?</label>
-          <textarea placeholder='Напишите что-нибудь...' name='customer_question' id='customer_question'></textarea>
-          <label for='customer_question' class='visually-hidden'>Напишите что-нибудь</label>
-          <button type='submit' class='button'>Отправить</button>
-        </form>
-        <button aria-label='Закрыть форму обратной связи' class='button-close'>
-          <svg xmlns='http://www.w3.org/2000/svg' width='18' height='17' viewBox='0 0 18 17'>
-            <path fill='#231F20'
-              d='M17.454 1.46L16.04.046 9 7.086 1.96.046.546 1.46l7.04 7.04-7.04 7.04 1.414 1.414L9 9.914l7.04 7.04 1.414-1.414-7.04-7.04z' />
-          </svg>
-        </button>
-      </section>
+      
 
     </main>
 
@@ -403,6 +383,27 @@
     </footer>
 
   </div>
+
+
+  <section class='visually-hidden feedback-form'>
+    <h2>Мы обязательно вам ответим!</h2>
+    <form action='https://echo.htmlacademy.ru/courses' method='post'>
+      <input class='customer-name' type='text' placeholder='Как вас зовут?' name='customer-name' id='customer-name'>
+      <label for='customer-name' class='visually-hidden'>Как вас зовут?</label>
+      <input class='customer-email' type='text' placeholder='Ваша почта для ответа?' name='customer-email' id='customer-email'>
+      <label for='customer-email' class='visually-hidden'>Ваша почта для ответа?</label>
+      <textarea class='customer-message' placeholder='Напишите что-нибудь...' name='customer-message' id='customer-message'></textarea>
+      <label for='customer-message' class='visually-hidden'>Напишите что-нибудь</label>
+      <button type='submit' class='button'>Отправить</button>
+    </form>
+    <button aria-label='Закрыть форму обратной связи' class='button-close'>
+      <svg xmlns='http://www.w3.org/2000/svg' width='18' height='17' viewBox='0 0 18 17'>
+        <path fill='#231F20'
+          d='M17.454 1.46L16.04.046 9 7.086 1.96.046.546 1.46l7.04 7.04-7.04 7.04 1.414 1.414L9 9.914l7.04 7.04 1.414-1.414-7.04-7.04z' />
+      </svg>
+    </button>
+  </section>
+
   <script src='js/script.js'></script>
 
 </body>
