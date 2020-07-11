@@ -217,7 +217,7 @@ if (typeof(ymaps) !== 'undefined') {
                             // Необходимо указать данный тип макета.
                             iconLayout: 'default#image',
                             // Своё изображение иконки метки.
-                            iconImageHref: 'img/pin_ice.svg',
+                            iconImageHref: 'img/pin-ice.svg',
                             // Размеры метки.
                             iconImageSize: [80, 140],
                             // Смещение левого верхнего угла иконки относительно

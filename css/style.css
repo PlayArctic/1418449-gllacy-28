@@ -271,8 +271,11 @@ img {
   position: relative;
 }
 
-
 .catalog-pad:focus-within .catalog-submenu {
+  display: flex;
+}
+
+.catalog-pad:hover .catalog-submenu {
   display: flex;
 }
 
@@ -282,19 +285,9 @@ img {
   background-color: var(--white);
 }
 
-
 .site-menu-inactive[href]:hover {
   color: var(--asphalt);
   background-color: var(--white);
-}
-
-.site-menu-inactive[href]:hover  {
-  color: var(--asphalt);
-  background-color: var(--white);
-}
-
-.site-menu-inactive[href]:focus+.catalog-submenu{ /*отображение submenu по focus*/
-  display:flex;
 }
 
 .site-menu-active {
@@ -385,9 +378,6 @@ img {
   margin-top: 18px;
   /*align-items: center;*/
 }
-
-.user-navigation:nth-child()
-
 
 .catalog-submenu li:first-child::after {
   content: "";
@@ -586,6 +576,7 @@ img {
 .cart-pad:focus-within .cart-field,
 .cart-pad-full:focus-within .cart-field {
   display: inline-block;
+  vertical-align: baseline;
 }
 
 .work-time {
@@ -785,7 +776,7 @@ img {
   position: relative;
   width: 560px;
   min-height: 229px;
-  background-image: url(../img/raspberry_back.jpg);
+  background-image: url(../img/raspberry-back.jpg);
   background-color: var(--raspb-background);
   background-size: cover;
   border-radius: 16px;
@@ -795,7 +786,7 @@ img {
   position: relative;
   width: 560px;
   min-height: 229px;
-  background-image: url(../img/choko_back.jpg);
+  background-image: url(../img/choko-back.jpg);
   background-color: var(--chocko-background);
   background-size: cover;
   border-radius: 16px;
@@ -890,13 +881,6 @@ img {
   height: calc(103% + 55px);
 }
 
-.showcase-item:focus-within .showcase-button { /*отображение кнопки при фокусе*/
-  display: flex;
-  z-index: 11;
-  position: absolute;
-  top: calc(100% - 4px);
-}
-
 .showcase-item:hover .showcase-button {
   display: flex;
   z-index: 11;
@@ -904,6 +888,12 @@ img {
   top: calc(100% - 4px);
 }
 
+.showcase-item:focus-within .showcase-button { /*отображение кнопки при фокусе*/
+  display: flex;
+  z-index: 11;
+  position: absolute;
+  top: calc(100% - 4px);
+}
 
 .showcase-img {
   width: 267px;
@@ -989,7 +979,7 @@ img {
 
 .advantages-wrapper {
   color: var(--asphalt);
-  background-image: url(../img/vaffle_pattern2.jpg); /* '..' выходим из папки css на уровень вверх, и заходим в папку img */
+  background-image: url(../img/vaffle-pattern2.jpg); /* '..' выходим из папки css на уровень вверх, и заходим в папку img */
   background-color: var(--advantages-background);
   background-repeat: repeat;
   width: 1146px;
@@ -1013,7 +1003,7 @@ img {
 }
 
 .advantages-items p {
-  position: relative; /*!каждый псевдоэлемент-картинка будет абсолют к своему p*/
+  position: relative; /*каждый псевдоэлемент-картинка будет абсолют к своему p*/
   font-size: 16px;
   line-height: 22px;
   margin-left: 48px;
@@ -1027,7 +1017,7 @@ img {
   position: absolute;
   top: -11px;
   left: -55px;
-  content: url(../img/ice_sundae2.svg);
+  content: url(../img/ice-sundae2.svg);
 }
 
 .advantages-items .cow:before {
@@ -1061,7 +1051,7 @@ img {
 }
 
 .blog-new-wrapper {
-  background-image: url(../img/strawberry_back.jpg);
+  background-image: url(../img/strawberry-back.jpg);
   background-color: var(--white);
   background-size: cover;
   /*background-image: 100%;*/
@@ -1105,7 +1095,7 @@ img {
 
 .subscr-wrapper {
   display: flex;
-  background-image: url(../img/post_back.png);
+  background-image: url(../img/post-back.png);
   background-size: cover;
   background-color: var(--white-transparent-popup);
   width: 560px;
@@ -1137,7 +1127,7 @@ img {
   margin-bottom: 35px;
 }
 
-.subscribtion .input_email {
+.subscribtion .input-email {
   box-sizing: border-box;
   border: 1px solid var(--email-input-border);
   border-radius: 6px;
@@ -1147,11 +1137,11 @@ img {
   padding-left: 13px;
 }
 
-.subscribtion .input_email:hover {
+.subscribtion .input-email:hover {
   outline: 2px solid var(--form-hover-within);
 }
 
-.subscribtion .input_email:focus-within {
+.subscribtion .input-email:focus-within {
   outline: 2px solid var(--form-focus-within);
 }
 
