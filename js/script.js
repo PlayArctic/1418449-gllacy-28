@@ -1,10 +1,10 @@
 
-var modalDarkWrapper = document.querySelector('.modal-dark-wrapper');
+var modalDarkWrapper = document.querySelector(".modal-dark-wrapper");
 var modalWrapper = document.querySelector(".modal-wrapper");
-var feedback = document.querySelector('.feedback-btn');
-var feedbackPopup = document.querySelector('.feedback-form');
-var buttonClose = document.querySelector('.button-close');
-var customerName = document.querySelector('[name=customer-name]');
+var feedback = document.querySelector(".feedback-btn");
+var feedbackPopup = document.querySelector(".feedback-form");
+var buttonClose = document.querySelector(".button-close");
+var customerName = document.querySelector("[name=customer-name]");
 
 
 var search = document.querySelector(".search");
@@ -53,10 +53,10 @@ if (cartPopup && cartFull) {
 
 
 if (feedback) {
-       feedback.addEventListener('click', function (evt) {
+       feedback.addEventListener("click", function (evt) {
               evt.preventDefault();
-              feedbackPopup.classList.add('visually-show-popup');
-              modalDarkWrapper.classList.add('visually-show');
+              feedbackPopup.classList.add("visually-show-popup");
+              modalDarkWrapper.classList.add("visually-show");
               customerName.focus();
 
        });
@@ -64,11 +64,11 @@ if (feedback) {
 
 
 if (buttonClose) {
-       buttonClose.addEventListener('click', function (evt) {
+       buttonClose.addEventListener("click", function (evt) {
               evt.preventDefault();
-              modalDarkWrapper.classList.remove('visually-show');
-              feedbackPopup.classList.remove('visually-show-popup');
-              feedbackForm.classList.remove('modal-error');
+              modalDarkWrapper.classList.remove("visually-show");
+              feedbackPopup.classList.remove("visually-show-popup");
+              feedbackForm.classList.remove("modal-error");
        });
 }
 
@@ -88,51 +88,51 @@ modalWrapper.addEventListener("click", function () {
 
 
 if (modalDarkWrapper) {
-       modalDarkWrapper.addEventListener('click', function () {
-              feedbackPopup.classList.remove('visually-show-popup');
-              feedbackForm.classList.remove('modal-error');
-              modalDarkWrapper.classList.remove('visually-show');
+       modalDarkWrapper.addEventListener("click", function () {
+              feedbackPopup.classList.remove("visually-show-popup");
+              feedbackForm.classList.remove("modal-error");
+              modalDarkWrapper.classList.remove("visually-show");
 
        });
 }
 
 
-document.addEventListener('keydown', function (evt) {
+document.addEventListener("keydown", function (evt) {
        if (evt.keyCode === 27) {
               if (modalDarkWrapper) {
-                     modalDarkWrapper.classList.remove('visually-show');
+                     modalDarkWrapper.classList.remove("visually-show");
               }
               if (feedbackPopup) {
-                     feedbackPopup.classList.remove('visually-show-popup');
-                     feedbackForm.classList.remove('modal-error');
+                     feedbackPopup.classList.remove("visually-show-popup");
+                     feedbackForm.classList.remove("modal-error");
               }
        }
 });
 
 // Form feedback//
 
-var feedbackForm = document.querySelector('.feedback-form');
+var feedbackForm = document.querySelector(".feedback-form");
 if (feedbackForm) {
-       var feedbackFormForm = feedbackForm.querySelector('form');
-       var feedbackName = feedbackForm.querySelector('.customer-name');
-       var feedbackEmail = feedbackForm.querySelector('.customer-email');
-       var feedbackMessage = feedbackForm.querySelector('.customer-message');
+       var feedbackFormForm = feedbackForm.querySelector("form");
+       var feedbackName = feedbackForm.querySelector(".customer-name");
+       var feedbackEmail = feedbackForm.querySelector(".customer-email");
+       var feedbackMessage = feedbackForm.querySelector(".customer-message");
 }
 
 
 
 if (feedbackFormForm) {
-       feedbackFormForm.addEventListener('submit', function (evt) {
+       feedbackFormForm.addEventListener("submit", function (evt) {
               if (!feedbackName.value || !feedbackEmail.value || !feedbackMessage.value) {
                      evt.preventDefault();
-                     feedbackForm.classList.add('modal-error');
+                     feedbackForm.classList.add("modal-error");
                      feedbackForm.classList.remove("modal-error");
                      feedbackForm.offsetWidth = feedbackForm.offsetWidth;
                      feedbackForm.classList.add("modal-error");
               } else {
-                     feedbackForm.classList.remove('visually-show-popup');
-                     modalDarkWrapper.classList.remove('visually-show');
-                     feedbackForm.classList.remove('modal-error');
+                     feedbackForm.classList.remove("visually-show-popup");
+                     modalDarkWrapper.classList.remove("visually-show");
+                     feedbackForm.classList.remove("modal-error");
               }
 
        });
@@ -141,50 +141,50 @@ if (feedbackFormForm) {
 
 // Слайдер bullets //
 
-var bullet1 = document.querySelector('.slider-controls button:nth-child(1)');
-var bullet2 = document.querySelector('.slider-controls button:nth-child(2)');
-var bullet3 = document.querySelector('.slider-controls button:nth-child(3)');
-var sliderWrapper = document.querySelector('.wrapper');
-var sliderTitle1 = document.querySelector('.slider-list li:nth-child(1)');
-var sliderTitle2 = document.querySelector('.slider-list li:nth-child(2)');
-var sliderTitle3 = document.querySelector('.slider-list li:nth-child(3)');
+var bullet1 = document.querySelector(".slider-controls button:nth-child(1)");
+var bullet2 = document.querySelector(".slider-controls button:nth-child(2)");
+var bullet3 = document.querySelector(".slider-controls button:nth-child(3)");
+var sliderWrapper = document.querySelector(".wrapper");
+var sliderTitle1 = document.querySelector(".slider-list li:nth-child(1)");
+var sliderTitle2 = document.querySelector(".slider-list li:nth-child(2)");
+var sliderTitle3 = document.querySelector(".slider-list li:nth-child(3)");
 
 
 if (bullet1) {
-       bullet1.addEventListener('click', function () {
-              bullet1.classList.add('current');
-              bullet2.classList.remove('current');
-              bullet3.classList.remove('current');
-              sliderWrapper.classList.add('site-wrapper-1');
-              sliderWrapper.classList.remove('site-wrapper-2');
-              sliderWrapper.classList.remove('site-wrapper-3');
-              sliderTitle1.classList.add('slide-current');
-              sliderTitle2.classList.remove('slide-current');
-              sliderTitle3.classList.remove('slide-current');
+       bullet1.addEventListener("click", function () {
+              bullet1.classList.add("current");
+              bullet2.classList.remove("current");
+              bullet3.classList.remove("current");
+              sliderWrapper.classList.add("site-wrapper-1");
+              sliderWrapper.classList.remove("site-wrapper-2");
+              sliderWrapper.classList.remove("site-wrapper-3");
+              sliderTitle1.classList.add("slide-current");
+              sliderTitle2.classList.remove("slide-current");
+              sliderTitle3.classList.remove("slide-current");
        });
 
-       bullet2.addEventListener('click', function () {
-              bullet1.classList.remove('current');
-              bullet2.classList.add('current');
-              bullet3.classList.remove('current');
-              sliderWrapper.classList.remove('site-wrapper-1');
-              sliderWrapper.classList.add('site-wrapper-2');
-              sliderWrapper.classList.remove('site-wrapper-3');
-              sliderTitle1.classList.remove('slide-current');
-              sliderTitle2.classList.add('slide-current');
-              sliderTitle3.classList.remove('slide-current');
+       bullet2.addEventListener("click", function () {
+              bullet1.classList.remove("current");
+              bullet2.classList.add("current");
+              bullet3.classList.remove("current");
+              sliderWrapper.classList.remove("site-wrapper-1");
+              sliderWrapper.classList.add("site-wrapper-2");
+              sliderWrapper.classList.remove("site-wrapper-3");
+              sliderTitle1.classList.remove("slide-current");
+              sliderTitle2.classList.add("slide-current");
+              sliderTitle3.classList.remove("slide-current");
        });
 
-       bullet3.addEventListener('click', function () {
-              bullet1.classList.remove('current');
-              bullet2.classList.remove('current');
-              bullet3.classList.add('current');
-              sliderWrapper.classList.remove('site-wrapper-1');
-              sliderWrapper.classList.remove('site-wrapper-2');
-              sliderWrapper.classList.add('site-wrapper-3');
-              sliderTitle1.classList.remove('slide-current');
-              sliderTitle2.classList.remove('slide-current');
-              sliderTitle3.classList.add('slide-current');
+       bullet3.addEventListener("click", function () {
+              bullet1.classList.remove("current");
+              bullet2.classList.remove("current");
+              bullet3.classList.add("current");
+              sliderWrapper.classList.remove("site-wrapper-1");
+              sliderWrapper.classList.remove("site-wrapper-2");
+              sliderWrapper.classList.add("site-wrapper-3");
+              sliderTitle1.classList.remove("slide-current");
+              sliderTitle2.classList.remove("slide-current");
+              sliderTitle3.classList.add("slide-current");
        });
 }
 
@@ -193,14 +193,14 @@ if (bullet1) {
 // Яндекс карты// 
 //Функция ymaps.ready() будет вызвана, когда
 // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
-if (typeof(ymaps) !== 'undefined') {
+if (typeof(ymaps) !== "undefined") {
        ymaps.ready(function () {
-              var myMap = new ymaps.Map('map', {
+              var myMap = new ymaps.Map("map", {
                      center: [59.939880, 30.330689],
                      zoom: 15.5,
                      controls: [] //убираем слои, пробки и т.д.
               }, {
-                     //searchControlProvider: 'yandex#search'
+                     //searchControlProvider: "yandex#search"
               }, {
                      suppressMapOpenBlock: true //убираем открыть в яндекс картах
               }, {
@@ -215,13 +215,13 @@ if (typeof(ymaps) !== 'undefined') {
                      }, {
                             // Опции.
                             // Необходимо указать данный тип макета.
-                            iconLayout: 'default#image',
+                            iconLayout: "default#image",
                             // Своё изображение иконки метки.
-                            iconImageHref: 'img/pin-ice.svg',
+                            iconImageHref: "img/pin-ice.svg",
                             // Размеры метки.
                             iconImageSize: [80, 140],
                             // Смещение левого верхнего угла иконки относительно
-                            // её 'ножки' (точки привязки).
+                            // её "ножки" (точки привязки).
                             iconImageOffset: [-40, -140],
                             // Смещение слоя с содержимым относительно слоя с картинкой.
                             iconContentOffset: [15, 15],

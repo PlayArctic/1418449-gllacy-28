@@ -5,6 +5,7 @@
   --white-cofee: #f8f7f4;
   --white-cofee-sub: #fefefe;
   --white-transparent: rgba(255, 255, 255, 0.8);
+  --white-transparent-semi: rgba(255, 255, 255, 0.4);
   --white-transparent-popup: rgba(255, 255, 255, 0.2);
   --orange-bright-cart: #e84d37;
   --submenu-hover: #fbded7;
@@ -120,7 +121,7 @@ img {
 }
 
 .page-body {
-  /*!не работает изза обертки слайдера на стиль сайта*/
+  /*не работает изза обертки слайдера на стиль сайта*/
   min-height: 100%;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
@@ -418,11 +419,11 @@ img {
 }
 
 .menu-text-login {
-  padding-left: 46px;
+  padding-left: 44px;
 }
 
 .menu-text-cart {
-  padding-left: 44px;
+  padding-left: 45px;
 }
 
 .user-navigation .button-hover:hover {
@@ -746,6 +747,7 @@ img {
   justify-content: space-between;
   align-items: center;
   width: 1200px;
+  margin-bottom: 34px;
 }
 
 .features-raspb h2,
@@ -822,8 +824,8 @@ img {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 26px;
   z-index: 10;
-  margin-top: 34px;
-  grid-row-gap: 16px;
+  margin-top: 32px;
+  grid-row-gap: 17px;
 }
 
 .showcase-item {
@@ -840,6 +842,14 @@ img {
 .showcase-item .titl {
   text-decoration: underline var(--white-transparent-popup);
   color: var(--white);
+}
+
+.showcase-item .titl:hover {
+  color: var(--a-hover);
+}
+
+.showcase-item .titl:active {
+  color: var(--a-active);
 }
 
 .showcase-item:focus-within .showcase-button {
@@ -964,7 +974,7 @@ img {
   background-color: var(--white);
   position: absolute;
   content: url(../img/hit.svg);
-  top: 11px;
+  top: 9px;
   left: 0px;
 }
 
@@ -980,7 +990,7 @@ img {
 
 .advantages-wrapper {
   color: var(--asphalt);
-  background-image: url(../img/vaffle-pattern2.jpg); /* '..' выходим из папки css на уровень вверх, и заходим в папку img */
+  background-image: url(../img/vaffle-pattern2.jpg); /* ".." выходим из папки css на уровень вверх, и заходим в папку img */
   background-color: var(--advantages-background);
   background-repeat: repeat;
   width: 1146px;
@@ -1124,7 +1134,7 @@ img {
 }
 
 .subscribtion form {
-  margin-top: 39px;
+  margin-top: 40px;
   margin-bottom: 35px;
 }
 
@@ -1235,7 +1245,7 @@ img {
   display: flex;
   justify-content: flex-end;
   list-style: none;
-  margin-bottom: 28px;
+  margin-bottom: 29px;
   margin-top: 65px;
 }
 
@@ -1265,7 +1275,7 @@ img {
   margin-right: 4px;
 }
 
-.page-item:last-child a {
+.page-arrow a {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -1584,10 +1594,10 @@ img {
 .cart-field {
   z-index: 10;
   position: absolute;
-  bottom: -242px;
+  top: 42px;
   right: 0px;
   width: 539px;
-  height: 242px;
+  min-height: 242px;
   font-size: 13px;
   line-height: 16px;
   background-color: var(--white-cofee);
@@ -1701,11 +1711,10 @@ img {
 }
 
 .cart-button {
-  position: absolute;
   text-decoration: none;
   color: var(--white);
   margin-left: 353px;
-  /* margin-right: 14px;*/
+  margin-bottom: 21px;
 }
 
 .cart-cross {
@@ -1736,8 +1745,8 @@ img {
   flex-wrap: wrap;
   min-width: 869px;
   min-height: 130px;
-  margin-top: 27px;
-  margin-bottom: 36px;
+  margin-top: 29px;
+  margin-bottom: 32px;
 }
 
 .filter {
@@ -1765,19 +1774,19 @@ img {
   font-size: 14px;
   line-height: 16px;
   margin-left: 16px;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 
 .filter-sort-by-wrp select {
   z-index: 2;
   width: 196px;
-  height: 36px;
+  height: 36px; 
+  text-align: start;
   background-color: transparent;
   background: var(--white-transparent-popup);
   border: none;
   border-radius: 20px;
   color: var(--white);
-  text-align: center;
   padding-left: 16px;
   padding-right: 16px;
   margin-top: -1px;
@@ -1922,7 +1931,7 @@ input[type="number"] {
 .filter-fat-content-wrp ul {
   display: flex;
   flex-wrap: wrap;
-  /*justify-content: space-around;*/
+  justify-content: flex-start;
   align-items: center;
   margin: 0px;
   padding: 0px;
@@ -1940,7 +1949,6 @@ input[type="number"] {
   display: block;
   cursor: pointer;
   user-select: none;
-  margin-left: 16px;
   font-family: "Roboto", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -1948,6 +1956,8 @@ input[type="number"] {
   line-height: 18px;
   min-width: 70px;
   min-height: 17px;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
 .fat-list .filter-fat-0 {
@@ -1964,16 +1974,10 @@ input[type="number"] {
   margin-left: 36px;
 }
 
-.fat-list li:nth-child(1n + 5) {
-  /*для корректного переполнения (макс +2 новых фильтра)*/
-  margin-left: 84px;
-  margin-top: 4px;
-}
-
-.fat-list li:nth-child(1n + 6) {
-  /*для корректного переполнения (макс +2 новых фильтра)*/
-  margin-left: 84px;
-  margin-top: 4px;
+.fat-list li:nth-child(5),
+.fat-list li:nth-child(6),
+.fat-list li:nth-child(7) {
+  margin-left: 47px;
 }
 
 .fat-item {
@@ -1990,8 +1994,8 @@ input[type="number"] {
   box-sizing: border-box;
   content: "";
   position: absolute;
-  left: -33px;
-  top: -3px;
+  left: -34px;
+  top: 2px;
   width: 22px;
   height: 22px;
   border: 3px solid var(--white-transparent);
@@ -2000,12 +2004,12 @@ input[type="number"] {
 }
 
 .fat-item:hover:enabled + label::before {
-  /*т.к. псевдоэлемент и псевдокласс не работают вместе''*/
+  /*т.к. псевдоэлемент и псевдокласс не работают вместе""*/
   border: 3px solid var(--white);
 }
 
 .fat-item:checked:focus:enabled + label::before {
-  /*т.к. псевдоэлемент и псевдокласс не работают вместе''*/
+  /*т.к. псевдоэлемент и псевдокласс не работают вместе""*/
   outline: -webkit-focus-ring-color auto 1px;
   border: 3px solid var(--white);
 }
@@ -2013,8 +2017,8 @@ input[type="number"] {
 .fat-item:checked:enabled + label::after {
   content: "";
   position: absolute;
-  top: 4px;
-  left: -26px;
+  top: 9px;
+  left: -27px;
   width: 7.92px;
   height: 7.92px;
   border-radius: 50%;
@@ -2022,12 +2026,12 @@ input[type="number"] {
 }
 
 .fat-item:checked:hover:enabled + label::after {
-  /*т.к. псевдоэлемент и псевдокласс не работают вместе''*/
+  /*т.к. псевдоэлемент и псевдокласс не работают вместе""*/
   background-color: var(--white);
 }
 
 .fat-item:focus:enabled + label::after {
-  /*т.к. псевдоэлемент и псевдокласс не работают вместе''*/
+  /*т.к. псевдоэлемент и псевдокласс не работают вместе""*/
   background-color: var(--white);
 }
 
@@ -2038,13 +2042,14 @@ input[type="number"] {
   padding: 0;
   display: flex;
   list-style: none;
+  justify-content: flex-start;
   flex-wrap: wrap;
   align-items: center;
   width: 711px;
   min-height: 36px;
   background: var(--white-transparent-popup);
   border-radius: 20px;
-  margin-top: 8px;
+  margin-top: 3px;
 }
 
 .filler-list li {
@@ -2071,12 +2076,17 @@ input[type="number"] {
   margin-left: 54px;
 }
 
-.filler-list li:nth-child(1n + 6) {
+.filler-list li:nth-child(6) {
   /*для корректного переполнения (макс +2 новых фильтра)*/
-  margin-left: 108px;
+  margin-left: 48px;
 }
 
-.filler-list li:nth-child(1n + 7) {
+.filler-list li:nth-child(7) {
+  /*для корректного переполнения (макс +2 новых фильтра)*/
+  margin-left: 94px;
+}
+
+.filler-list li:nth-child(8) {
   /*для корректного переполнения (макс +2 новых фильтра)*/
   margin-left: 153px;
 }
@@ -2093,7 +2103,7 @@ input[type="number"] {
 .filler-item:checked + label::after {
   content: url(../img/checkbox-on.svg);
   position: absolute;
-  top: 0px;
+  top: 6px;
   left: -32px;
   background-color: var(--basic-green), var(--white-transparent-popup);
   cursor: pointer;
@@ -2119,9 +2129,11 @@ input[type="number"] {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 25px;
   cursor: pointer;
   padding-left: 1px;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
 .filler-item:not(:checked) + label::before {
@@ -2129,7 +2141,7 @@ input[type="number"] {
   content: "";
   position: absolute;
   left: -32px;
-  top: 0px;
+  top: 6px;
   width: 21px;
   height: 20px;
   border: 1.858px solid var(--white-transparent);
@@ -2143,13 +2155,13 @@ input[type="number"] {
 }
 
 .filler-item:focus:enabled + label::after {
-  /*т.к. псевдоэлемент и псевдокласс не работают вместе''*/
+  /*т.к. псевдоэлемент и псевдокласс не работают вместе""*/
   outline: -webkit-focus-ring-color auto 1px;
   opacity: 1;
 }
 
 .filler-item:not(:checked):focus + label::before {
-  /*т.к. псевдоэлемент и псевдокласс не работают вместе''*/
+  /*т.к. псевдоэлемент и псевдокласс не работают вместе""*/
   outline: -webkit-focus-ring-color auto 1px;
   border: 1.858px solid var(--white);
 }
@@ -2181,6 +2193,15 @@ input[type="number"] {
   color: var(--asphalt);
   box-shadow: inset 0px 2px 1px var(--menu-button-shadow);
   border: none;
+}
+
+/*правила для fat-item filler-item disabled*/
+.fat-item:disabled + label::before,
+.fat-item:disabled + label::after,
+.filler-item:disabled + label::before,
+.filler-item:disabled + label::after {
+  border-color: var(--white-transparent-semi);
+  opacity: 0.4;
 }
 
 /*Feedback form*/
