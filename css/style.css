@@ -24,6 +24,7 @@
   --a-active: #e84d37;
   --menu-separator: rgba(50, 50, 50, 0.2);
   --login-underline: rgba(50, 50, 50, 0.3);
+  --link-underline: rgba(255, 188, 158, 0.3);
   /**/
   --orange-normal-button: linear-gradient(180deg, #f26843 0%, #e74a35 100%);
   --orange-push-button: linear-gradient(180deg, #f26843 0%, #e74a35 100%);
@@ -212,13 +213,18 @@ img {
   line-height: 16px;
 }
 
-.breadcrumbs a:hover {
-  color: var(--a-hover);
+.breadcrumbs a {
+  text-decoration: underline var(--white-transparent-popup);
 }
 
-.breadcrumbs a:active {
-  color: var(--a-active);
+.breadcrumbs a:hover {
+  color: var(--a-hover);
+  text-decoration: underline var(--link-underline);
 }
+
+/*.breadcrumbs a:active {
+  color: var(--a-active);
+}*/
 
 .breadcrumbs li:nth-child(2)::before {
   position: absolute;
@@ -399,8 +405,9 @@ img {
   background-color: var(--submenu-active);
 }
 
-.catalog-submenu .submenu-active {
+.submenu-active a {
   background-color: var(--submenu-current);
+  color: var(--white)
 }
 
 .user-navigation > a {
@@ -840,17 +847,18 @@ img {
 }
 
 .showcase-item .titl {
-  text-decoration: underline var(--white-transparent-popup);
   color: var(--white);
+  text-decoration: underline var(--white-transparent-popup);
 }
 
 .showcase-item .titl:hover {
   color: var(--a-hover);
+  text-decoration: underline var(--link-underline);
 }
 
-.showcase-item .titl:active {
+/*.showcase-item .titl:active {
   color: var(--a-active);
-}
+}*/
 
 .showcase-item:focus-within .showcase-button {
   display: flex;
@@ -1397,14 +1405,16 @@ img {
 
 .add-info a {
   color: var(--white);
+  text-decoration: underline  var(--white-transparent-popup);
 }
 
 .add-info a:hover {
   color: var(--a-hover);
+  text-decoration: underline  var(--link-underline);
 }
-.add-info a:active {
+/*.add-info a:active {
   color: var(--a-active);
-}
+}*/
 
 .add-info-bold {
   font-weight: bold;
@@ -1433,11 +1443,21 @@ img {
 
 .developer a:hover {
   color: var(--a-hover);
+  text-decoration: none;
 }
 
-.developer a:active {
-  color: var(--a-active);
+.developer .spanlink {
+  text-decoration: underline var(--white-transparent-popup);
 }
+
+.made-by:hover .spanlink {
+  text-decoration: underline var(--link-underline);
+}
+
+
+/*.developer a:active {
+  color: var(--a-active);
+}*/
 
 .developer img {
   align-self: flex-start; /*по дефолту флекс растягивает картинку*/
@@ -1572,11 +1592,12 @@ img {
 
 .login-form a:hover {
   color: var(--a-hover);
+  text-decoration: underline var(--link-underline);
 }
 
-.login-form a:active {
+/*.login-form a:active {
   color: var(--a-active);
-}
+}*/
 
 .regbuttons {
   display: flex;
@@ -2176,16 +2197,20 @@ input[type="number"] {
   box-sizing: border-box;
   border-radius: 20px;
   color: inherit;
-  font-weight: 500;
-  font-size: 16px;
   line-height: 18px;
   cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Roboto", "Arial", sans-serif;
 }
 
 .form-filter > button:hover {
   background-color: var(--white);
   color: var(--asphalt);
   border: none;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Roboto", "Arial", sans-serif;
 }
 
 .form-filter > button:active {
